@@ -1,4 +1,5 @@
 import Head from "next/head";
+import abc from "../styles/abc.module.scss";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>New page</h1>
+        <h1 className={abc.title}>New page</h1>
       </main>
     </>
   );
