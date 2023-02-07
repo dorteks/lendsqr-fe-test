@@ -1,0 +1,85 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 17em;
+
+  .page100 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .showing {
+      font-size: 14px;
+      color: #545f7d;
+      margin-right: 10px;
+    }
+
+    .next100button {
+      width: 80px;
+      height: 30px;
+      display: flex;
+      margin-right: 10px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .outOf100 {
+      font-size: 14px;
+      color: #545f7d;
+    }
+  }
+
+  .pages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .prevBtn {
+      width: 24px;
+      height: 24px;
+    }
+    .page1 {
+      font-size: 16px;
+      color: #545f7d;
+      margin-left: 20px;
+    }
+    .page2 {
+      font-size: 16px;
+      color: #545f7d;
+      margin-left: 20px;
+    }
+    .page3 {
+      font-size: 16px;
+      color: #545f7d;
+      margin-left: 20px;
+    }
+    .pageHidden {
+      font-size: 16px;
+      color: #545f7d;
+      margin-left: 20px;
+    }
+    .page15 {
+      font-size: 16px;
+      color: #545f7d;
+      margin-left: 20px;
+    }
+    .page16 {
+      font-size: 16px;
+      color: #545f7d;
+      margin-left: 20px;
+    }
+    .nextBtn {
+      width: 24px;
+      height: 24px;
+      margin-left: 20px;
+    }
+  }
+}

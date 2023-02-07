@@ -1,4 +1,5 @@
 import React from "react";
+import Pagination from "../pagination";
 import Table from "../table";
 import styles from "./body.container.module.scss";
 
@@ -53,6 +54,8 @@ const BodyContainer = () => {
       </section>
 
       <Table />
+
+      <Pagination />
     </main>
   );
 };
