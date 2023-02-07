@@ -1,0 +1,45 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 100%;
+  display: flex;
+  min-height: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(233, 196, 196);
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  flex-direction: row;
+}
+
+.sidebar {
+  flex-grow: 0;
+  display: none;
+  background-color: rgb(212, 208, 208);
+
+  @media (min-width: 769px) {
+    display: flex;
+    flex-basis: 20%;
+  }
+}
+
+.body {
+  flex-basis: 100%;
+  background-color: white;
+
+  @media (min-width: 769px) {
+    width: 100%;
+    display: flex;
+    flex-basis: 80%;
+  }
+}
