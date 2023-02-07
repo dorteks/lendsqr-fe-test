@@ -5,7 +5,7 @@ import styles from "./user-container.module.scss";
 const UserContainer = () => {
   return (
     <div className={styles.container}>
-      <Link href="/dasboard" className={styles.backArrow}>
+      <Link href="/dashboard" className={styles.backArrow}>
         <img src="/images/np-back-arrow.svg" alt="back to users" />
         <h4>Back to Users</h4>
       </Link>

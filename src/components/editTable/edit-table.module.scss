@@ -1,0 +1,102 @@
+.container {
+  width: 270px;
+  height: auto;
+  padding: 20px;
+
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.organisation {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #545f7d;
+}
+
+.select {
+  width: 230px;
+  height: 40px;
+  padding: 10px;
+  margin-top: 7px;
+
+  opacity: 0.2;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #213f7d;
+}
+.input {
+  height: 40px;
+  width: 230px;
+  padding: 20px;
+  margin-top: 7px;
+  font-size: 14px;
+
+  opacity: 0.2;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #213f7d;
+}
+
+.userName {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #545f7d;
+}
+
+.email {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #545f7d;
+}
+
+.phoneNumber {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #545f7d;
+}
+
+.date {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #545f7d;
+}
+
+.status {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #545f7d;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+  .reset {
+    width: 98px;
+    height: 40px;
+
+    border: 1px solid #545f7d;
+    border-radius: 8px;
+
+    color: #545f7d;
+    font-size: 14px;
+  }
+
+  .filter {
+    width: 98px;
+    height: 40px;
+
+    background: #39cdcc;
+    border: 1px solid #39cdcc;
+    border-radius: 8px;
+
+    color: #ffffff;
+    font-size: 14px;
+  }
+}

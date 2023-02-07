@@ -1,6 +1,7 @@
-import SearchButton from "@/components/searchButton";
 import React from "react";
 import styles from "./topbar.module.scss";
+import SearchButton from "@/components/searchButton";
+import Link from "next/link";
 
 const Topbar = () => {
   return (
@@ -9,7 +10,9 @@ const Topbar = () => {
         <img src="/images/hamburger.png" />
       </div>
 
-      <img className={styles.logo} src="/images/logo.svg" alt="logo" />
+      <Link href="/dashboard" className={styles.logo}>
+        <img src="/images/logo.svg" alt="logo" />
+      </Link>
 
       <SearchButton placeholder="Search for anything" />
 
