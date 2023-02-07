@@ -1,0 +1,24 @@
+.table {
+  width: 100%;
+  height: 640px;
+  padding: 30px;
+  //   align-items: center;
+  //   justify-content: center;
+  margin-top: 40px;
+  background-color: green;
+
+  .filterTable {
+    padding-left: 10px;
+  }
+
+  .tableHead {
+    text-align: start;
+  }
+
+  .tableData {
+    text-align: start;
+
+    height: 60px;
+    align-items: center;
+  }
+}

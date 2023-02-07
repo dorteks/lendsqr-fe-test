@@ -1,4 +1,5 @@
 import React from "react";
+import Table from "../table";
 import styles from "./body.container.module.scss";
 
 const BodyContainer = () => {
@@ -50,6 +51,8 @@ const BodyContainer = () => {
           );
         })}
       </section>
+
+      <Table />
     </main>
   );
 };
