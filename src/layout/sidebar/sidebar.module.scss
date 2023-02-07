@@ -6,3 +6,79 @@
   padding-left: 30px;
 }
 
+// top - dashboard section
+
+.header {
+  height: 40px;
+  display: flex;
+  margin-top: 40px;
+  font-style: normal;
+  flex-direction: row;
+  align-items: center;
+}
+
+.arrowDown {
+  margin-left: 11px;
+}
+
+// middle - section
+.heading {
+  color: #545f7d;
+  font-size: 12px;
+  margin-top: 40px;
+  font-style: normal;
+  margin-bottom: 10px;
+  font-family: "Work Sans";
+  text-transform: uppercase;
+}
+
+.menu {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menuButton {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  margin-right: 10px;
+  flex-direction: column;
+}
+
+.text {
+  height: 20px;
+  color: #213f7d;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: lighter;
+  font-family: "Work Sans";
+}
+
+// logout - buttom section
+
+.divider {
+  margin-top: 70px;
+}
+
+.logout {
+  height: 40px;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.footer {
+  color: #213f7d;
+  font-size: 12px;
+  margin-top: 40px;
+  font-style: normal;
+  margin-bottom: 20px;
+  font-family: "Work Sans";
+}
