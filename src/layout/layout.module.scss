@@ -36,10 +36,4 @@
 .body {
   flex-basis: 100%;
   background-color: white;
-
-  @media (min-width: 769px) {
-    width: 100%;
-    display: flex;
-    flex-basis: 80%;
-  }
 }
