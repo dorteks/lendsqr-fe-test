@@ -1,7 +1,12 @@
+import BodyContainer from "@/container/body/body.container";
 import React from "react";
 
 const Body = () => {
-  return <div>Body content</div>;
+  return (
+    <div>
+      <BodyContainer />
+    </div>
+  );
 };
 
 export default Body;
