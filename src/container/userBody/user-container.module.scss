@@ -1,0 +1,200 @@
+.container {
+  padding: 3.5em;
+  padding-top: 4rem;
+
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: scroll;
+
+  font-style: normal;
+  background: #f5f5f5;
+  font-family: "Work Sans";
+}
+
+.backArrow {
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userActions {
+  display: flex;
+  padding-top: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 24px;
+  color: #213f7d;
+
+  .blacklist {
+    width: 170px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 20px;
+    border: 1px solid #e4033b;
+
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: #e4033b;
+  }
+
+  .activate {
+    width: 170px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #39cdcc;
+
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: #39cdcc;
+  }
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px;
+  margin-top: 46px;
+
+  border-radius: 4px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+  background: #ffffff;
+
+  .div {
+    display: flex;
+    height: 100px;
+    font-style: normal;
+    flex-direction: row;
+    align-items: center;
+
+    .userAvatar {
+      margin-right: 20px;
+    }
+
+    .userName {
+      margin-right: 30px;
+
+      h3 {
+        color: #213f7d;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      h4 {
+        color: #545f7d;
+        margin-top: 8px;
+        font-size: 14px;
+      }
+    }
+
+    .userTier {
+      margin-left: 30px;
+
+      h4 {
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 30px;
+      }
+
+      div {
+        gap: 2px;
+        margin-top: 10px;
+      }
+    }
+
+    .bankDetails {
+      margin-left: 30px;
+
+      h3 {
+        color: #213f7d;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      h4 {
+        color: #213f7d;
+        font-size: 12px;
+        margin-top: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .userInfoTabs {
+    display: flex;
+    height: 110px;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    font-size: 16px;
+    // font-family: "SF Compact Text";
+
+    color: rgba(0, 0, 0, 0.8);
+
+    :hover {
+      color: #39cdcc;
+    }
+  }
+}
+
+.generalDetails {
+  height: auto;
+  padding: 30px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+  .divider {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    font-size: 16px;
+    color: #213f7d;
+  }
+
+  .info {
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+
+    div {
+      margin-top: 30px;
+    }
+
+    h5 {
+      color: #545f7d;
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: #545f7d;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .empty {
+      margin-bottom: 40px;
+    }
+  }
+}
