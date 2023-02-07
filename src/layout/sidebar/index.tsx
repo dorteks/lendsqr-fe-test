@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import styles from "./sidebar.module.scss";
 
@@ -12,13 +13,14 @@ const Sidebar = () => {
           alt: "organisation",
           text: "Switch Organisation",
           arrow: "/images/arrow-down.svg",
+          href: "/",
         },
         {
           id: 2,
           img: "/images/home.png",
-
           text: "Dashboard",
           alt: "dashboard",
+          href: "/dashboard",
         },
       ].map((item) => {
         return (
@@ -27,7 +29,9 @@ const Sidebar = () => {
               <img src={item.img} alt={item.alt} />
             </div>
 
-            <h3 className={styles.text}>{item.text} </h3>
+            <Link href={item.href}>
+              <h3 className={styles.text}>{item.text} </h3>
+            </Link>
 
             <img className={styles.arrowDown} src={item.arrow} alt="" />
           </div>
@@ -43,48 +47,56 @@ const Sidebar = () => {
           text: "Users",
           alt: "users ",
           img: "/images/user-friends.png",
+          url: "/dashboard/user",
         },
         {
           id: 2,
           text: "Guarantors",
           alt: "guarantors ",
           img: "/images/users-group.png",
+          url: "",
         },
         {
           id: 3,
           alt: "loan ",
           text: "Loans",
           img: "/images/sack.png",
+          url: "",
         },
         {
           id: 4,
           alt: "decision ",
           text: "Decision Models",
           img: "/images/handshake-regular.png",
+          url: "",
         },
         {
           id: 5,
           text: "Savings",
           alt: "piggy bank ",
           img: "/images/piggy-bank.png",
+          url: "",
         },
         {
           id: 6,
           alt: "loan ",
           text: "Loan Requests",
           img: "/images/loan-request.png",
+          url: "",
         },
         {
           id: 7,
           text: "Whitelist",
           alt: "user check ",
           img: "/images/user-check.png",
+          url: "",
         },
         {
           id: 8,
           text: "Karma",
           alt: "user times ",
           img: "/images/user-times.png",
+          url: "",
         },
       ].map((item) => {
         return (
@@ -92,8 +104,9 @@ const Sidebar = () => {
             <div className={styles.menuButton}>
               <img src={item.img} alt={item.alt} />
             </div>
-
-            <h3 className={styles.text}>{item.text} </h3>
+            <Link href={item.url}>
+              <h3 className={styles.text}>{item.text} </h3>
+            </Link>
           </div>
         );
       })}

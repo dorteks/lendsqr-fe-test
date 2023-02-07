@@ -1,91 +1,61 @@
-import React from "react";
+import { COLUMNS } from "./columns";
+import React, { useMemo } from "react";
+import { useTable } from "react-table";
+import dataMock from "./data.mock.json";
 import styles from "./table.module.scss";
 
 const Table = () => {
+  const columns = useMemo(() => COLUMNS, []);
+  const data = useMemo(() => dataMock, []);
+
+  const tableInstance = useTable({
+    columns: columns,
+    data: data,
+  });
+
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    tableInstance;
+
   return (
-    <section className={styles.table}>
-      <table>
-        <tr className={styles.tableHead}>
-          <th>
-            <div>
-              Organisation
-              <img
-                className={styles.filterTable}
-                src="/images/filter-results-button.svg"
-              />
-            </div>
-          </th>
-          <th>
-            <div>
-              Contact
-              <img
-                className={styles.filterTable}
-                src="/images/filter-results-button.svg"
-              />
-            </div>
-          </th>
-          <th>
-            <div>
-              Country
-              <img
-                className={styles.filterTable}
-                src="/images/filter-results-button.svg"
-              />
-            </div>
-          </th>
-          <th>
-            <div>
-              Company
-              <img
-                className={styles.filterTable}
-                src="/images/filter-results-button.svg"
-              />
-            </div>
-          </th>
-          <th>
-            <div>
-              Contact
-              <img
-                className={styles.filterTable}
-                src="/images/filter-results-button.svg"
-              />
-            </div>
-          </th>
-          <th>
-            <div>
-              Country
-              <img
-                className={styles.filterTable}
-                src="/images/filter-results-button.svg"
-              />
-            </div>
-          </th>
-          <th></th>
-        </tr>
-        <tr className={styles.tableData}>
-          <td>Lendsqr</td>
-          <td>Adedeji</td>
-          <td>adedeji@lendsqr.com</td>
-          <td>08079898989</td>
-          <td>May 15, 2020 10:00 AM</td>
-          <td>Pending</td>
-          <td>
-            <img src="/images/more-vertical.svg" />
-          </td>
-        </tr>
-        <tr>
-          <td>Lendstar</td>
-          <td>Tosin Dokunmu</td>
-          <td>adedeji@lendsqr.com</td>
-          <td>08079898989</td>
-          <td>May 15, 2020 10:00 AM</td>
-          <td>Blacklisted</td>
-          <td>
-            <img src="/images/more-vertical.svg" />
-          </td>
-        </tr>
+    <div className={styles.container}>
+      <table className={styles.table} {...getTableProps()}>
+        <thead>
+          {headerGroups.map((headerGroup, index) => (
+            <tr {...headerGroup.getHeaderGroupProps()} key={index}>
+              {headerGroup.headers.map((column, index) => (
+                <th
+                  className={styles.tableHead}
+                  {...column.getHeaderProps()}
+                  key={index}
+                >
+                  {column.render("Header")}
+                  <img src="/images/filter-results-button.svg" />
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+
+        <tbody {...getTableBodyProps()}>
+          {rows.map((row, index) => {
+            prepareRow(row);
+            return (
+              <tr {...row.getRowProps()} key={index}>
+                {row.cells.map((cell, index) => {
+                  return (
+                    <td {...cell.getCellProps} key={index}>
+                      <div className={styles.tableData}>
+                        {cell.render("Cell")}{" "}
+                      </div>
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
       </table>
-    </section>
+    </div>
   );
 };
 
