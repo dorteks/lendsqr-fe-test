@@ -1,6 +1,6 @@
 import React from "react";
-import Table from "../table";
 import Pagination from "../pagination";
+import Table from "../tableData/table";
 import styles from "./body.container.module.scss";
 
 const BodyContainer = () => {
