@@ -1,8 +1,8 @@
-import Link from "next/link";
 import React from "react";
-import styles from "./user-container.module.scss";
+import Link from "next/link";
+import styles from "./user-data.module.scss";
 
-const UserContainer = () => {
+const UserData = () => {
   return (
     <div className={styles.container}>
       <Link href="/dashboard" className={styles.backArrow}>
@@ -189,4 +189,4 @@ const UserContainer = () => {
   );
 };
 
-export default UserContainer;
+export default UserData;

@@ -1,11 +1,11 @@
-import UserContainer from "@/container/userBody/user.container";
-import Layout from "@/layout";
 import React from "react";
+import Layout from "@/layout";
+import UserData from "@/container/userData/user-data.container";
 
 const Users = () => {
   return (
     <Layout>
-      <UserContainer />
+      <UserData />
     </Layout>
   );
 };
