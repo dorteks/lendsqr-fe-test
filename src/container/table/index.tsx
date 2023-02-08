@@ -1,6 +1,6 @@
 import { COLUMNS } from "./columns";
 import React, { useMemo } from "react";
-import { useTable } from "react-table";
+import { useTable, usePagination } from "react-table";
 import dataMock from "./data.mock.json";
 import styles from "./table.module.scss";
 
@@ -8,10 +8,13 @@ const Table = () => {
   const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => dataMock, []);
 
-  const tableInstance = useTable({
-    columns: columns,
-    data: data,
-  });
+  const tableInstance = useTable(
+    {
+      columns: columns,
+      data: data,
+    },
+    usePagination
+  );
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     tableInstance;

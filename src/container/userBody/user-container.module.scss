@@ -158,7 +158,7 @@
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 
-  .divider {
+  .dividerH {
     width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -195,6 +195,233 @@
     }
     .empty {
       margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .container {
+    padding: 1.5em;
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .container {
+    padding: 1em;
+    padding-top: 3rem;
+  }
+
+  .userDetails {
+    padding: 10px;
+
+    .div {
+      height: 100px;
+
+      .userAvatar {
+        margin-right: 15px;
+        width: 80px;
+      }
+
+      .userName {
+        margin-right: 20px;
+      }
+
+      .userTier {
+        margin-left: 20px;
+
+        h4 {
+          margin-right: 20px;
+        }
+      }
+
+      .bankDetails {
+        margin-left: 20px;
+      }
+    }
+
+    .userInfoTabs {
+      :hover {
+        color: #39cdcc;
+      }
+
+      h4 {
+        width: 20%;
+        text-align: center;
+      }
+    }
+  }
+
+  .generalDetails {
+    width: 100%;
+
+    h4 {
+      font-size: 16px;
+      color: #213f7d;
+    }
+
+    .info {
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// width 480px - 560px
+@media (max-width: 560px) {
+  .container {
+    padding: 0.5em;
+    padding-top: 3rem;
+    background: red;
+  }
+
+  .userActions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+
+    .buttonGroup {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .blacklist {
+      width: 150px;
+      font-size: 12px;
+    }
+
+    .activate {
+      width: 150px;
+      font-size: 12px;
+    }
+  }
+
+  .generalDetails {
+    width: 100%;
+
+    h4 {
+      font-size: 16px;
+      color: #213f7d;
+    }
+
+    .info {
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    padding: 0.5em;
+    padding-top: 4rem;
+  }
+
+  .userActions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 22px;
+
+    .buttonGroup {
+      margin-top: 20px;
+    }
+
+    .blacklist {
+      width: 140px;
+      font-size: 12px;
+    }
+
+    .activate {
+      width: 140px;
+      font-size: 12px;
+    }
+  }
+
+  .userDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .divider {
+      display: none;
+    }
+
+    .div {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      gap: 20px;
+
+      .userName {
+        margin: auto;
+        text-align: center;
+      }
+
+      .userTier {
+        margin: auto;
+        text-align: center;
+
+        h4 {
+          text-align: center;
+          margin-left: 20px;
+        }
+
+        .stars {
+          text-align: center;
+        }
+      }
+
+      .bankDetails {
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    .userInfoTabs {
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      display: grid;
+      grid-row-gap: 0px;
+      grid-column-gap: 0px;
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      height: auto;
+      gap: 20px;
+
+      font-size: 16px;
+
+      h4 {
+        width: 100%;
+      }
+
+      :hover {
+        color: #39cdcc;
+      }
+    }
+  }
+
+  .generalDetails {
+    width: 100%;
+
+    h4 {
+      font-size: 16px;
+      color: #213f7d;
+    }
+
+    .info {
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

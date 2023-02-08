@@ -1,13 +1,15 @@
 .container {
+  width: 100%;
   padding: 30px;
   margin-top: 40px;
   background-color: white;
 }
 
 .table {
+  width: 100%;
+  color: #545f7d;
   font-size: 12px;
   line-height: 16px;
-  color: #545f7d;
 
   th,
   td {
@@ -34,8 +36,8 @@
 .tableData {
   color: #545f7d;
   font-size: 14px;
-  padding-top: 23px;
-  padding-bottom: 23px;
-  line-height: 16px;
   text-align: left;
+  padding-top: 23px;
+  line-height: 16px;
+  padding-bottom: 23px;
 }

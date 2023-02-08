@@ -22,9 +22,9 @@ const UserContainer = () => {
       <section className={styles.userDetails}>
         <div className={styles.div}>
           <img
+            alt="user profile pics"
             className={styles.userAvatar}
             src="/images/dashboard-user-avatar.svg"
-            alt="user profile pics"
           />
 
           <div className={styles.userName}>
@@ -40,7 +40,7 @@ const UserContainer = () => {
 
           <div className={styles.userTier}>
             <h4>User&apos;s Tier</h4>
-            <div>
+            <div className={styles.stars}>
               <img src="/images/np-star-filled.svg" alt="filled star" />
               <img src="/images/np-star-not-filled.svg" alt="empty star" />
               <img src="/images/np-star-not-filled.svg" alt="empty star" />
@@ -93,7 +93,7 @@ const UserContainer = () => {
         <img
           alt="divider"
           src="/images/divider.svg"
-          className={styles.divider}
+          className={styles.dividerH}
         />
 
         <h4>Education and Employment</h4>
@@ -122,7 +122,7 @@ const UserContainer = () => {
         <img
           alt="divider"
           src="/images/divider.svg"
-          className={styles.divider}
+          className={styles.dividerH}
         />
 
         <h4>Socials</h4>
@@ -143,7 +143,7 @@ const UserContainer = () => {
         <img
           alt="divider"
           src="/images/divider.svg"
-          className={styles.divider}
+          className={styles.dividerH}
         />
 
         <h4>Guarantor</h4>
@@ -165,7 +165,7 @@ const UserContainer = () => {
         <img
           alt="divider"
           src="/images/divider.svg"
-          className={styles.divider}
+          className={styles.dividerH}
         />
 
         <section className={styles.info}>
