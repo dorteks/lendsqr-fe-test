@@ -1,11 +1,10 @@
 .container {
   width: 100%;
   padding: 3em;
+  font-style: normal;
+  background: #fafafa;
   // max-height: 100vh;
   // overflow-y: scroll;
-
-  font-style: normal;
-  background: #e5e5e5;
   font-family: "Work Sans";
 }
 
@@ -13,7 +12,7 @@
   color: #213f7d;
   font-size: 24px;
   font-style: normal;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .dashboard {
@@ -25,26 +24,21 @@
   .usersTabs {
     width: 100%;
     max-width: 22%;
-    padding-left: 30px;
-    background-color: white;
-  }
-
-  .userIcon {
-    padding-top: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   }
 
   .userClass {
-    padding-top: 14px;
-
-    font-size: 14px;
     color: #545f7d;
+    font-size: 14px;
+    padding: 14px 0px;
     text-transform: uppercase;
   }
 
   .userNumber {
-    padding-top: 12px;
-    padding-bottom: 30px;
-
     font-size: 24px;
     color: #213f7d;
     text-transform: uppercase;

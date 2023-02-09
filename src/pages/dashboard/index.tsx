@@ -1,14 +1,12 @@
-import Layout from "@/layout";
-import Body from "@/layout/body";
 import React from "react";
+import Layout from "@/layout";
+import styles from "./dashboard.module.scss";
 
 const Dashboard = () => {
   return (
-    <main>
-      <Layout>
-        <Body />
-      </Layout>
-    </main>
+    <Layout>
+      <h3 className={styles.container}>Dashboard</h3>
+    </Layout>
   );
 };
 

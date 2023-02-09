@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "@/layout";
-import UserData from "@/container/userData/user-data.container";
+import UserData from "@/container/userData/user-data";
 
-const Users = () => {
+const UserDetails = () => {
   return (
     <Layout>
       <UserData />
@@ -10,4 +10,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default UserDetails;

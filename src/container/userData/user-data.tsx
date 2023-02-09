@@ -74,13 +74,13 @@ const UserData = () => {
         <section className={styles.info}>
           {[
             { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "phone number", value: "07089898989" },
-            { id: 1, title: "email address", value: "grace@gmail.com" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
+            { id: 2, title: "phone number", value: "07089898989" },
+            { id: 3, title: "email address", value: "grace@gmail.com" },
+            { id: 4, title: "full name", value: "Grace Effiong" },
+            { id: 5, title: "full name", value: "Grace Effiong" },
+            { id: 6, title: "full name", value: "Grace Effiong" },
+            { id: 7, title: "full name", value: "Grace Effiong" },
+            { id: 8, title: "full name", value: "Grace Effiong" },
           ].map((info) => {
             return (
               <div key={info.id}>
@@ -99,17 +99,17 @@ const UserData = () => {
         <h4>Education and Employment</h4>
         <section className={styles.info}>
           {[
-            { id: 1, title: "level of education", value: "B.Sc" },
-            { id: 1, title: "employment status", value: "Employed" },
-            { id: 1, title: "sector of employment", value: "FinTech" },
-            { id: 1, title: "duration of employment", value: "2 years" },
-            { id: 1, title: "office email", value: "grace@lendsqr" },
+            { id: 9, title: "level of education", value: "B.Sc" },
+            { id: 10, title: "employment status", value: "Employed" },
+            { id: 11, title: "sector of employment", value: "FinTech" },
+            { id: 12, title: "duration of employment", value: "2 years" },
+            { id: 13, title: "office email", value: "grace@lendsqr" },
             {
-              id: 1,
+              id: 14,
               title: "monthly income ",
               value: "#200,000.00- #400,000.00",
             },
-            { id: 1, title: "loan repayment ", value: "40,000" },
+            { id: 15, title: "loan repayment ", value: "40,000" },
           ].map((info) => {
             return (
               <div key={info.id}>
@@ -128,9 +128,9 @@ const UserData = () => {
         <h4>Socials</h4>
         <section className={styles.info}>
           {[
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
+            { id: 17, title: "full name", value: "Grace Effiong" },
+            { id: 18, title: "full name", value: "Grace Effiong" },
+            { id: 19, title: "full name", value: "Grace Effiong" },
           ].map((info) => {
             return (
               <div key={info.id}>
@@ -149,10 +149,10 @@ const UserData = () => {
         <h4>Guarantor</h4>
         <section className={styles.info}>
           {[
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
+            { id: 20, title: "full name", value: "Grace Effiong" },
+            { id: 21, title: "full name", value: "Grace Effiong" },
+            { id: 22, title: "full name", value: "Grace Effiong" },
+            { id: 23, title: "full name", value: "Grace Effiong" },
           ].map((info) => {
             return (
               <div key={info.id}>
@@ -170,10 +170,10 @@ const UserData = () => {
 
         <section className={styles.info}>
           {[
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 1, title: "full name", value: "Grace Effiong" },
+            { id: 24, title: "full name", value: "Grace Effiong" },
+            { id: 25, title: "full name", value: "Grace Effiong" },
+            { id: 26, title: "full name", value: "Grace Effiong" },
+            { id: 27, title: "full name", value: "Grace Effiong" },
           ].map((info) => {
             return (
               <div key={info.id}>

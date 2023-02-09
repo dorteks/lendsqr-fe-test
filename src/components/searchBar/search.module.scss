@@ -1,0 +1,20 @@
+.searchButton {
+  width: 25em;
+  opacity: 0.7;
+  height: 3.5em;
+  display: none;
+  color: #545f7d;
+  font-size: 14px;
+  border-radius: 8px;
+  font-style: normal;
+  padding-left: 20px;
+  background: #ffffff;
+  font-family: "Work Sans";
+  border: 1px solid #213f7d;
+}
+
+@media (min-width: 940px) {
+  .searchButton {
+    display: block;
+  }
+}

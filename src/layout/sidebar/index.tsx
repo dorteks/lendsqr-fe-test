@@ -1,5 +1,5 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 import styles from "./sidebar.module.scss";
 
 const Sidebar = () => {
@@ -50,7 +50,7 @@ const Sidebar = () => {
             text: "Users",
             alt: "users ",
             img: "/images/user-friends.png",
-            url: "/dashboard/user",
+            url: "/users",
           },
           {
             id: 2,
@@ -200,7 +200,7 @@ const Sidebar = () => {
             id: 2,
             alt: "fees and pricing icon",
             img: "/images/badge-percent.svg",
-            text: "Fees and Pricing Products",
+            text: "Fees and Pricing",
           },
           {
             id: 3,
