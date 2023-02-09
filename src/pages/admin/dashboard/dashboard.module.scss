@@ -1,11 +1,49 @@
 .container {
-  width: 100%;
   height: auto;
-  padding: 3.5em;
-  color: #213f7d;
-  padding-top: 4rem;
+  min-width: 1150px;
+  padding: 1.5em;
   font-style: normal;
-  background: #f8f7f7;
-  // overflow-y: scroll;
+  background: #fafafa;
   font-family: "Work Sans";
+
+  @media (min-width: 1340px) {
+    padding: 3em;
+  }
+}
+
+.heading {
+  color: #213f7d;
+  font-size: 24px;
+  font-style: normal;
+  padding-bottom: 40px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .usersTabs {
+    width: 100%;
+    max-width: 22%;
+    padding: 30px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .userClass {
+    color: #545f7d;
+    font-size: 14px;
+    padding: 14px 0px;
+    text-transform: uppercase;
+  }
+
+  .userNumber {
+    font-size: 24px;
+    color: #213f7d;
+    text-transform: uppercase;
+  }
 }

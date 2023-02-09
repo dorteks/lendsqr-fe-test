@@ -25,8 +25,8 @@ const Pagination = () => {
         <h4 className={styles.page2}>2</h4>
         <h4 className={styles.page3}>3</h4>
         <h4 className={styles.pageHidden}>...</h4>
-        <h4 className={styles.page15}>15</h4>
-        <h4 className={styles.page16}>16</h4>
+        <h4 className={styles.page15}>9</h4>
+        <h4 className={styles.page16}>10</h4>
 
         <img
           className={styles.nextBtn}
