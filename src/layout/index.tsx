@@ -10,15 +10,14 @@ type Props = {
 const Layout = (props: Props) => {
   return (
     <main className={styles.layout}>
-      <section className={styles.topbar}>
-        <Topbar />
-      </section>
-      <div className={styles.content}>
-        <section className={styles.sidebar}>
+      <Topbar />
+
+      <section className={styles.content}>
+        <div className={styles.sidebar}>
           <Sidebar />
-        </section>
+        </div>
         <section className={styles.body}>{props.children}</section>
-      </div>
+      </section>
     </main>
   );
 };

@@ -1,13 +1,11 @@
 .container {
+  width: 100%;
   padding: 3.5em;
   padding-top: 4rem;
-
-  width: 100%;
   min-height: 100vh;
-  // overflow-y: scroll;
-
   font-style: normal;
-  background: #e5e5e5;
+  background: #fafafa;
+  // overflow-y: scroll;
   font-family: "Work Sans";
 }
 
@@ -20,54 +18,48 @@
 
 .userActions {
   display: flex;
+  color: #213f7d;
+  font-size: 24px;
   padding-top: 30px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
-  font-size: 24px;
-  color: #213f7d;
-
   .blacklist {
     width: 170px;
     height: 40px;
+    color: #e4033b;
+    font-size: 14px;
     border-radius: 8px;
     margin-right: 20px;
-    border: 1px solid #e4033b;
-
-    font-size: 14px;
+    background: #fafafa;
     letter-spacing: 0.1em;
+    border: 1px solid #e4033b;
     text-transform: uppercase;
-
-    color: #e4033b;
   }
 
   .activate {
     width: 170px;
     height: 40px;
-    border-radius: 8px;
-    border: 1px solid #39cdcc;
-
-    font-size: 14px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-
     color: #39cdcc;
+    font-size: 14px;
+    border-radius: 8px;
+    background: #fafafa;
+    letter-spacing: 0.1em;
+    border: 1px solid #39cdcc;
+    text-transform: uppercase;
   }
 }
 
 .userDetails {
   display: flex;
-  flex-direction: column;
-
   padding: 30px;
   margin-top: 46px;
-
   border-radius: 4px;
+  background: #ffffff;
+  flex-direction: column;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-
-  background: #ffffff;
 
   .div {
     display: flex;
@@ -132,14 +124,12 @@
   .userInfoTabs {
     display: flex;
     height: 110px;
+    font-size: 16px;
     flex-direction: row;
     align-items: flex-end;
-    justify-content: space-between;
-
-    font-size: 16px;
-    // font-family: "SF Compact Text";
-
     color: rgba(0, 0, 0, 0.8);
+    justify-content: space-between;
+    // font-family: "SF Compact Text";
 
     :hover {
       color: #39cdcc;
@@ -151,10 +141,9 @@
   height: auto;
   padding: 30px;
   margin-top: 30px;
-  padding-bottom: 30px;
-
   border-radius: 4px;
   background: #ffffff;
+  padding-bottom: 30px;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 
@@ -200,7 +189,6 @@
 }
 
 // width 980px - 1250pxpx
-
 @media (max-width: 1250px) {
   .container {
     padding: 1em;

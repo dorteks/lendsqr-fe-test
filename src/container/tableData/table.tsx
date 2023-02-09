@@ -120,9 +120,9 @@ const Table = () => {
           </tr>
           {data?.data.map((tdata: any) => {
             return (
-              <tr key={tdata} className={styles.tdata}>
+              <tr key={tdata.id} className={styles.tdata}>
                 <td className={styles.data}>
-                  <Link href="/dashboard/user">{tdata.orgName}</Link>
+                  <Link href={`/users/` + tdata.id}>{tdata.orgName}</Link>
                 </td>
                 <td>{tdata.userName}</td>
                 <td>{tdata.email}</td>

@@ -1,44 +1,40 @@
 import React from "react";
 import styles from "./topbar.module.scss";
-import SearchButton from "@/components/searchButton";
 import Link from "next/link";
+import Avatar from "@/components/avatar/avatar";
+import SearchBar from "@/components/searchBar";
 
 const Topbar = () => {
   return (
-    <main className={styles.container}>
-      <div className={styles.openMenu}>
-        <img src="/images/hamburger.png" />
-      </div>
-
+    <nav className={styles.container}>
       <Link href="/dashboard" className={styles.logo}>
         <img src="/images/logo.svg" alt="logo" />
       </Link>
 
-      <SearchButton placeholder="Search for anything" />
+      <SearchBar placeholder="Search for anything" />
+      <div className={styles.searchIconBox}>
+        <img
+          className={styles.searchIcon}
+          alt="search icon"
+          src="/images/search-icon.svg"
+        />
+      </div>
 
-      <h5 className={styles.docs}>Docs</h5>
+      <div className={styles.actions}>
+        <a className={styles.docs}>Docs</a>
 
-      <img
-        alt="notification icon"
-        src="/images/notification.svg"
-        className={styles.notification}
-      />
+        <img
+          alt="notification icon"
+          src="/images/notification.svg"
+          className={styles.notification}
+        />
+        <Avatar />
+      </div>
 
-      <div></div>
-      <img
-        alt="user profile picture"
-        src="/images/user-avatar.svg"
-        className={styles.userAvatar}
-      />
-
-      <h5 className={styles.userName}>Ayodele</h5>
-
-      <img
-        alt="dropdown menu icon"
-        src="/images/arrow-down.svg"
-        className={styles.arrowDown}
-      />
-    </main>
+      <div className={styles.openMenu}>
+        <img src="/images/hamburger.png" />
+      </div>
+    </nav>
   );
 };
 
