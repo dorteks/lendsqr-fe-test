@@ -5,6 +5,9 @@ import Button from "@/components/button";
 import styles from "./login.module.scss";
 
 const Login = () => {
+  const inputEmail = "admin@lendsqr.com";
+  const inputPassword = "************";
+
   return (
     <main className={styles.main}>
       <section className={styles.aside}>
@@ -24,12 +27,14 @@ const Login = () => {
         <div className={styles.container}>
           <h1 className={styles.welcome}>Welcome!</h1>
           <h3 className={styles.details}>Enter details to login.</h3>
-          <Input placeholder="Email" />
-          <Input placeholder="Password" />
+          <Input placeholder="Email" value={inputEmail} />
+          <Input placeholder="Password" value={inputPassword} />
           <Link className={styles.forgotPassword} href="/forgot-password">
             forgot password?
           </Link>
-          <Button title="Log in"></Button>
+          <Link href="/admin/users">
+            <Button title="Log in" />
+          </Link>
         </div>
       </section>
     </main>
