@@ -19,12 +19,12 @@ const UserData = () => {
   const { data, isLoading } = useUserData(userId, onSuccess, onError);
 
   if (isLoading) {
-    return <h3>Loading....</h3>;
+    return <h3 className={styles.container}>Loading....</h3>;
   }
 
   return (
     <div className={styles.container}>
-      <Link href="/users" className={styles.backArrow}>
+      <Link href="/admin/users" className={styles.backArrow}>
         <img src="/images/np-back-arrow.svg" alt="back to users" />
         <h4>Back to Users</h4>
       </Link>

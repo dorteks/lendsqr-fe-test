@@ -21,7 +21,7 @@ const Sidebar = () => {
             img: "/images/home.png",
             text: "Dashboard",
             alt: "dashboard",
-            href: "/dashboard",
+            href: "/admin/dashboard",
           },
         ].map((item) => {
           return (
@@ -50,7 +50,7 @@ const Sidebar = () => {
             text: "Users",
             alt: "users ",
             img: "/images/user-friends.png",
-            url: "/users",
+            url: "/admin/users",
           },
           {
             id: 2,
@@ -231,7 +231,9 @@ const Sidebar = () => {
             className={styles.icon}
             src="/images/sign-out.png"
           />
-          <h3 className={styles.text}>Logout</h3>
+          <Link href="/">
+            <h3 className={styles.text}>Logout</h3>
+          </Link>
         </div>
       </section>
 

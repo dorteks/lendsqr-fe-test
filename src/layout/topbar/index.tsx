@@ -7,7 +7,7 @@ import SearchBar from "@/components/searchBar";
 const Topbar = () => {
   return (
     <nav className={styles.container}>
-      <Link href="/dashboard" className={styles.logo}>
+      <Link href="/admin/users" className={styles.logo}>
         <img src="/images/logo.svg" alt="logo" />
       </Link>
 

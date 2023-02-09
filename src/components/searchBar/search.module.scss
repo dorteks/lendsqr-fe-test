@@ -1,20 +1,49 @@
+.container {
+  display: flex;
+  background: #ffffff;
+  border: 1px solid inherit;
+}
+
 .searchButton {
   width: 25em;
   opacity: 0.7;
   height: 3.5em;
   display: none;
-  color: #545f7d;
   font-size: 14px;
-  border-radius: 8px;
   font-style: normal;
   padding-left: 20px;
-  background: #ffffff;
+  border-radius: 8px;
+
   font-family: "Work Sans";
-  border: 1px solid #213f7d;
+}
+
+.searchIcon {
+  width: 3em;
+  display: none;
+  background-color: aqua;
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    display: none;
+  }
 }
 
 @media (min-width: 940px) {
   .searchButton {
     display: block;
+  }
+
+  .searchIcon {
+    display: block;
+    align-self: center;
+    border-radius: 8px;
+    margin-left: -50px;
+    background-color: rgb(113, 241, 241);
+
+    .icon {
+      display: flex;
+      height: 48px;
+    }
   }
 }
