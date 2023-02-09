@@ -2,15 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styles from "./table.module.scss";
 import useTableData from "./useTableData";
-import { ShowUserActions } from "@/components/showUserActions";
-
-const showOrHideDiv = () => {
-  const display = document.getElementById("showOrHideDiv");
-
-  if (display?.style.display === "!none") {
-    display.style.display = "block";
-  }
-};
+import { ShowUserActions } from "../showUserActions";
 
 const Table = () => {
   const onSuccess = () => {
@@ -37,8 +29,6 @@ const Table = () => {
 
   return (
     <div className={styles.container}>
-      <ShowUserActions />
-
       <table className={styles.users}>
         <thead className={styles.thead}>
           <tr>
@@ -100,7 +90,7 @@ const Table = () => {
               </button>
             </td>
             <td>
-              <img src="/images/more-vertical.svg" />
+              <ShowUserActions />
             </td>
           </tr>
           <tr className={styles.tdata}>
@@ -115,7 +105,7 @@ const Table = () => {
               </button>
             </td>
             <td>
-              <img src="/images/more-vertical.svg" />
+              <ShowUserActions />
             </td>
           </tr>
           <tr className={styles.tdata}>
@@ -130,7 +120,7 @@ const Table = () => {
               </button>
             </td>
             <td>
-              <img src="/images/more-vertical.svg" />
+              <ShowUserActions />
             </td>
           </tr>
           {dataTable?.data.map((user: any) => {
@@ -149,32 +139,7 @@ const Table = () => {
                   </button>
                 </td>
                 <td>
-                  <img
-                    onClick={() => showOrHideDiv()}
-                    src="/images/more-vertical.svg"
-                  />
-                  {/* <section id="showOrHideDiv" className={styles.container}>
-                    <div className={styles.userAction}>
-                      <Link href={`/users` + user.id}>
-                        <img src="/images/view-user.svg" alt="view user" />
-                        <h4>View Details</h4>
-                      </Link>
-                    </div>
-                    <div className={styles.userAction}>
-                      <img
-                        src="/images/blacklist-user.svg"
-                        alt="blacklist user"
-                      />
-                      <h4>Blacklist User</h4>
-                    </div>
-                    <div className={styles.userAction}>
-                      <img
-                        src="/images/activate-user.svg"
-                        alt="activate user"
-                      />
-                      <h4>Activate User</h4>
-                    </div>
-                  </section> */}
+                  <ShowUserActions />
                 </td>
               </tr>
             );

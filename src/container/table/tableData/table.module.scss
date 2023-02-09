@@ -5,6 +5,17 @@
   background-color: white;
 }
 
+.modal {
+  display: display;
+  width: 400px;
+  z-index: 1040;
+  padding: 20px;
+  position: fixed;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
 .loading {
   margin-top: 40px;
   color: #545f7d;
