@@ -26,7 +26,7 @@ const Table = () => {
 
   return (
     <div className={styles.container}>
-      <table>
+      <table className={styles.users}>
         <thead className={styles.thead}>
           <tr>
             {[
@@ -63,9 +63,11 @@ const Table = () => {
               { id: 7, title: " ", src: "" },
             ].map((thead: any) => {
               return (
-                <th key={thead.id}>
-                  <h4>{thead.title}</h4>
-                  <img src={thead.src} />
+                <th key={thead.id} className={styles.thead}>
+                  <div className={styles.tablehead}>
+                    <h4>{thead.title}</h4>
+                    <img src={thead.src} />
+                  </div>
                 </th>
               );
             })}
@@ -118,16 +120,16 @@ const Table = () => {
               <img src="/images/more-vertical.svg" />
             </td>
           </tr>
-          {data?.data.map((tdata: any) => {
+          {data?.data.map((user: any) => {
             return (
-              <tr key={tdata.id} className={styles.tdata}>
+              <tr key={user.id} className={styles.tdata}>
                 <td className={styles.data}>
-                  <Link href={`/users/` + tdata.id}>{tdata.orgName}</Link>
+                  <Link href={`/users/` + user.id}>{user.orgName}</Link>
                 </td>
-                <td>{tdata.userName}</td>
-                <td>{tdata.email}</td>
-                <td>{tdata.phoneNumber}</td>
-                <td>{tdata.createdAt}</td>
+                <td>{user.userName}</td>
+                <td>{user.email}</td>
+                <td>{user.phoneNumber}</td>
+                <td>{user.createdAt}</td>
                 <td>
                   <button className={styles.blacklisted}>
                     <h3>Blacklisted</h3>

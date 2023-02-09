@@ -1,11 +1,30 @@
 import React from "react";
 import Link from "next/link";
+import useUserData from "./useUserData";
+import { useRouter } from "next/router";
 import styles from "./user-data.module.scss";
 
 const UserData = () => {
+  const onSuccess = () => {
+    console.log("fetching data");
+  };
+  const onError = () => {
+    console.log("error fetching data");
+  };
+
+  const router = useRouter();
+  const { id } = router.query;
+  const userId = id;
+
+  const { data, isLoading } = useUserData(userId, onSuccess, onError);
+
+  if (isLoading) {
+    return <h3>Loading....</h3>;
+  }
+
   return (
     <div className={styles.container}>
-      <Link href="/dashboard" className={styles.backArrow}>
+      <Link href="/users" className={styles.backArrow}>
         <img src="/images/np-back-arrow.svg" alt="back to users" />
         <h4>Back to Users</h4>
       </Link>
@@ -28,7 +47,9 @@ const UserData = () => {
           />
 
           <div className={styles.userName}>
-            <h3>Grace Effiom</h3>
+            <h3>
+              {data?.data.profile.firstName} {data?.data.profile.lastName}{" "}
+            </h3>
             <h4>LSQFf587g90</h4>
           </div>
 
@@ -54,41 +75,64 @@ const UserData = () => {
           />
 
           <div className={styles.bankDetails}>
-            <h3>#200,000.00</h3>
-            <h4>9912345678 / Providus Bank</h4>
+            <h3>
+              {data?.data.profile.currency} {data?.data.accountBalance}
+            </h3>
+            <h4>{data?.data.accountNumber} / Providus Bank</h4>
           </div>
         </div>
 
         <div className={styles.userInfoTabs}>
-          <h4>General Details</h4>
-          <h4>Documents</h4>
-          <h4>Bank Details</h4>
-          <h4>Loans</h4>
-          <h4>Savings</h4>
-          <h4>App and System</h4>
+          <h4 className={styles.tabsBorder}>General Details</h4>
+          <h4 className={styles.tabsBorder}>Documents</h4>
+          <h4 className={styles.tabsBorder}>Bank Details</h4>
+          <h4 className={styles.tabsBorder}>Loans</h4>
+          <h4 className={styles.tabsBorder}>Savings</h4>
+          <h4 className={styles.tabsBorder}>App and System</h4>
         </div>
       </section>
 
       <section className={styles.generalDetails}>
         <h4>Personal Information</h4>
         <section className={styles.info}>
-          {[
-            { id: 1, title: "full name", value: "Grace Effiong" },
-            { id: 2, title: "phone number", value: "07089898989" },
-            { id: 3, title: "email address", value: "grace@gmail.com" },
-            { id: 4, title: "full name", value: "Grace Effiong" },
-            { id: 5, title: "full name", value: "Grace Effiong" },
-            { id: 6, title: "full name", value: "Grace Effiong" },
-            { id: 7, title: "full name", value: "Grace Effiong" },
-            { id: 8, title: "full name", value: "Grace Effiong" },
-          ].map((info) => {
-            return (
-              <div key={info.id}>
-                <h5>{info.title}</h5>
-                <h3>{info.value}</h3>
-              </div>
-            );
-          })}
+          <div>
+            <h5>full name</h5>
+            <h3>
+              {data?.data.profile.firstName} {data?.data.profile.lastName}
+            </h3>
+          </div>
+          <div>
+            <h5>phone number</h5>
+            <h3>{data?.data.phoneNumber}</h3>
+          </div>
+          <div>
+            <h5>email address</h5>
+            <h3>{data?.data.email}</h3>
+          </div>
+
+          <div>
+            <h5>bvn</h5>
+            <h3>{data?.data.profile.bvn}</h3>
+          </div>
+          <div>
+            <h5>gender</h5>
+            <h3>{data?.data.profile.gender}</h3>
+          </div>
+          <div>
+            <h5>marital status</h5>
+            <h3>Single</h3>
+            {/* <h3>{data?.data}</h3> */}
+          </div>
+          <div>
+            <h5>children</h5>
+            <h3>None</h3>
+            {/* <h3>{data?.data}</h3> */}
+          </div>
+          <div>
+            <h5>type of residence</h5>
+            <h3>Parents&apos;s Apartment</h3>
+            {/* <h3>{data?.data}</h3> */}
+          </div>
         </section>
         <img
           alt="divider"
@@ -98,26 +142,42 @@ const UserData = () => {
 
         <h4>Education and Employment</h4>
         <section className={styles.info}>
-          {[
-            { id: 9, title: "level of education", value: "B.Sc" },
-            { id: 10, title: "employment status", value: "Employed" },
-            { id: 11, title: "sector of employment", value: "FinTech" },
-            { id: 12, title: "duration of employment", value: "2 years" },
-            { id: 13, title: "office email", value: "grace@lendsqr" },
-            {
-              id: 14,
-              title: "monthly income ",
-              value: "#200,000.00- #400,000.00",
-            },
-            { id: 15, title: "loan repayment ", value: "40,000" },
-          ].map((info) => {
-            return (
-              <div key={info.id}>
-                <h5>{info.title}</h5>
-                <h3>{info.value}</h3>
-              </div>
-            );
-          })}
+          <div>
+            <h5>level of education</h5>
+            <h3>{data?.data.education.level}</h3>
+          </div>
+          <div>
+            <h5>employment status</h5>
+            <h3>{data?.data.education.employmentStatus}</h3>
+          </div>
+          <div>
+            <h5>sector of employment</h5>
+            <h3>{data?.data.education.sector}</h3>
+          </div>
+          <div>
+            <h5>duration of employment</h5>
+            <h3>{data?.data.education.duration}</h3>
+          </div>{" "}
+          <div>
+            <h5>office email</h5>
+            <h3>{data?.data.education.officeEmail}</h3>
+          </div>
+          <div>
+            <h5>monthly income</h5>
+            <h3>
+              {data?.data.profile.currency}{" "}
+              {data?.data.education.monthlyIncome[0]} -{" "}
+              {data?.data.profile.currency}{" "}
+              {data?.data.education.monthlyIncome[1]}
+            </h3>
+          </div>
+          <div>
+            <h5>loan repayment</h5>
+            <h3>
+              {" "}
+              {data?.data.profile.currency} {data?.data.education.loanRepayment}
+            </h3>
+          </div>
         </section>
         <img
           alt="divider"
@@ -127,18 +187,18 @@ const UserData = () => {
 
         <h4>Socials</h4>
         <section className={styles.info}>
-          {[
-            { id: 17, title: "full name", value: "Grace Effiong" },
-            { id: 18, title: "full name", value: "Grace Effiong" },
-            { id: 19, title: "full name", value: "Grace Effiong" },
-          ].map((info) => {
-            return (
-              <div key={info.id}>
-                <h5>{info.title}</h5>
-                <h3>{info.value}</h3>
-              </div>
-            );
-          })}
+          <div>
+            <h5>twitter</h5>
+            <h3>{data?.data.socials.twitter}</h3>
+          </div>
+          <div>
+            <h5>facebook</h5>
+            <h3>{data?.data.socials.facebook}</h3>
+          </div>
+          <div>
+            <h5>instagram</h5>
+            <h3>{data?.data.socials.instagram}</h3>
+          </div>
         </section>
         <img
           alt="divider"
@@ -148,41 +208,24 @@ const UserData = () => {
 
         <h4>Guarantor</h4>
         <section className={styles.info}>
-          {[
-            { id: 20, title: "full name", value: "Grace Effiong" },
-            { id: 21, title: "full name", value: "Grace Effiong" },
-            { id: 22, title: "full name", value: "Grace Effiong" },
-            { id: 23, title: "full name", value: "Grace Effiong" },
-          ].map((info) => {
-            return (
-              <div key={info.id}>
-                <h5>{info.title}</h5>
-                <h3>{info.value}</h3>
-              </div>
-            );
-          })}
-        </section>
-        <img
-          alt="divider"
-          src="/images/divider.svg"
-          className={styles.dividerH}
-        />
-
-        <section className={styles.info}>
-          {[
-            { id: 24, title: "full name", value: "Grace Effiong" },
-            { id: 25, title: "full name", value: "Grace Effiong" },
-            { id: 26, title: "full name", value: "Grace Effiong" },
-            { id: 27, title: "full name", value: "Grace Effiong" },
-          ].map((info) => {
-            return (
-              <div key={info.id}>
-                <h5>{info.title}</h5>
-                <h3>{info.value}</h3>
-                <h6 className={styles.empty}></h6>
-              </div>
-            );
-          })}
+          <div>
+            <h5>full name</h5>
+            <h3>
+              {data?.data.guarantor.firstName} {data?.data.guarantor.lastName}
+            </h3>
+          </div>
+          <div>
+            <h5>phone number</h5>
+            <h3>{data?.data.guarantor.phoneNumber}</h3>
+          </div>
+          <div>
+            <h5> address</h5>
+            <h3>{data?.data.guarantor.address} </h3>
+          </div>
+          <div>
+            <h5>gender</h5>
+            <h3>{data?.data.guarantor.gender} </h3>
+          </div>
         </section>
       </section>
     </div>
