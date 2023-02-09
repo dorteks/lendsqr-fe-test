@@ -10,82 +10,111 @@
   color: #545f7d;
 }
 
-.thead {
-  color: #545f7d;
-  text-align: left;
-}
-
-.tdata {
+.users {
+  width: 100%;
   color: #545f7d;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
+  font-style: normal;
+  font-family: "Work Sans";
+  border-collapse: collapse;
+}
 
-  .data {
-    height: 60px;
+.users td,
+.users th {
+  padding: 8px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+}
+
+.users tr:hover {
+  background-color: #ddd;
+}
+
+.users th {
+  color: #545f7d;
+  text-align: left;
+  padding-top: 18px;
+  align-items: center;
+  padding-bottom: 18px;
+}
+
+.tablehead {
+  display: flex;
+  gap: 15px;
+}
+
+// .tdata {
+//   color: #545f7d;
+//   font-size: 14px;
+//   font-weight: 400;
+//   line-height: 16px;
+
+//   .data {
+//     height: 60px;
+//   }
+// }
+
+.blacklisted {
+  width: 100px;
+  height: 30px;
+  border: white;
+
+  // opacity: 0.1;
+  background: #eebcc8;
+  border-radius: 15px;
+
+  h3 {
+    color: #e4033b;
+    font-weight: 400;
+    font-size: 14px;
   }
+}
 
-  .blacklisted {
-    width: 100px;
-    height: 30px;
-    border: white;
+.active {
+  width: 70px;
+  height: 30px;
+  border: white;
 
-    // opacity: 0.1;
-    background: #eebcc8;
-    border-radius: 15px;
+  // opacity: 0.1;
+  background: #ccf1d7;
+  border-radius: 15px;
 
-    h3 {
-      color: #e4033b;
-      font-weight: 400;
-      font-size: 14px;
-    }
+  h3 {
+    color: #39cd62;
+    font-weight: 400;
+    font-size: 14px;
   }
+}
 
-  .active {
-    width: 100px;
-    height: 30px;
-    border: white;
+.inactive {
+  width: 80px;
+  height: 30px;
+  border: white;
 
-    // opacity: 0.1;
-    background: #ccf1d7;
-    border-radius: 15px;
+  // opacity: 0.1;
+  background: #e2e4e9;
+  border-radius: 15px;
 
-    h3 {
-      color: #39cd62;
-      font-weight: 400;
-      font-size: 14px;
-    }
+  h3 {
+    color: #545f7d;
+    font-weight: 400;
+    font-size: 14px;
   }
+}
 
-  .inactive {
-    width: 100px;
-    height: 30px;
-    border: white;
+.pending {
+  width: 90px;
+  height: 30px;
+  border: white;
 
-    // opacity: 0.1;
-    background: #e2e4e9;
-    border-radius: 15px;
+  // opacity: 0.1;
+  background: #f0e4c2;
+  border-radius: 15px;
 
-    h3 {
-      color: #545f7d;
-      font-weight: 400;
-      font-size: 14px;
-    }
-  }
-
-  .pending {
-    width: 100px;
-    height: 30px;
-    border: white;
-
-    // opacity: 0.1;
-    background: #f0e4c2;
-    border-radius: 15px;
-
-    h3 {
-      color: #e9b200;
-      font-weight: 400;
-      font-size: 14px;
-    }
+  h3 {
+    color: #e9b200;
+    font-weight: 400;
+    font-size: 14px;
   }
 }
