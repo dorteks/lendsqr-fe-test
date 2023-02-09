@@ -5,7 +5,6 @@
   min-height: 100vh;
   font-style: normal;
   background: #fafafa;
-  // overflow-y: scroll;
   font-family: "Work Sans";
 }
 
@@ -280,10 +279,10 @@
 
   .userActions {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-size: 22px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
     .buttonGroup {
       margin-top: 20px;
@@ -303,7 +302,6 @@
   }
 
   .generalDetails {
-    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
 
@@ -328,10 +326,10 @@
 
   .userActions {
     display: flex;
+    font-size: 22px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    font-size: 22px;
 
     .buttonGroup {
       margin-top: 20px;
@@ -349,24 +347,17 @@
   }
 
   .userDetails {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-
     .divider {
       display: none;
     }
 
     .div {
+      gap: 30px;
       height: auto;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
       justify-content: center;
-
-      gap: 20px;
 
       .userName {
         margin: auto;
@@ -394,10 +385,8 @@
     }
 
     .userInfoTabs {
-      width: 100%;
-      margin-top: 50px;
-      margin-bottom: 30px;
       display: grid;
+      margin-top: 50px;
       grid-row-gap: 0px;
       grid-column-gap: 0px;
       grid-template-rows: repeat(1, 1fr);
@@ -405,10 +394,10 @@
       height: auto;
       gap: 20px;
 
-      font-size: 16px;
-
-      h4 {
+      .tabsBorder {
         width: 100%;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.8);
       }
 
       :hover {
@@ -418,8 +407,7 @@
   }
 
   .generalDetails {
-    width: 100%;
-    padding-left: 10px;
+    padding-left: 5px;
     padding-right: 10px;
 
     h4 {
