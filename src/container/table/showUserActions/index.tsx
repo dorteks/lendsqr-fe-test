@@ -24,26 +24,27 @@ export const ShowUserActions = () => {
       {modal && (
         <section className={styles.modal}>
           <div onClick={toggleModal} className={styles.overlay}></div>
-
-          <div
-            onClick={() => console.log("clicked view details")}
-            // className={styles.userAction}
-          >
-            <FilterTable />
-          </div>
-          <div
-            onClick={() => console.log("clicked blacklist user")}
-            className={styles.userAction}
-          >
-            <img src="/images/blacklist-user.svg" alt="blacklist user" />
-            <h4>Blacklist User</h4>
-          </div>
-          <div
-            onClick={() => console.log("clicked activate user")}
-            className={styles.userAction}
-          >
-            <img src="/images/activate-user.svg" alt="activate user" />
-            <h4>Activate User</h4>
+          <div className={styles.modalContent}>
+            <div
+              onClick={() => console.log("clicked view details")}
+              // className={styles.userAction}
+            >
+              <FilterTable />
+            </div>
+            <div
+              onClick={() => console.log("clicked blacklist user")}
+              className={styles.userAction}
+            >
+              <img src="/images/blacklist-user.svg" alt="blacklist user" />
+              <h4>Blacklist User</h4>
+            </div>
+            <div
+              onClick={() => console.log("clicked activate user")}
+              className={styles.userAction}
+            >
+              <img src="/images/activate-user.svg" alt="activate user" />
+              <h4>Activate User</h4>
+            </div>
           </div>
         </section>
       )}

@@ -1,15 +1,16 @@
 body.active-modal {
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
-.btnMdal {
-  padding: 10px 20px;
-  display: block;
-  margin: 100px auto 0;
-  font-size: 18px;
+.btnModal {
+  width: 30px;
+  border: none;
+  height: 30px;
+  background-color: inherit;
 }
 
-.modal {
+.modal,
+.overlay {
   width: 180px;
   height: 130px;
   position: absolute;
@@ -29,6 +30,39 @@ body.active-modal {
   height: 130px;
   position: fixed;
 }
+
+.modalContent {
+  max-width: 180px;
+  min-width: 130px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+// .modal,
+// .overlay {
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   position: fixed;
+// }
+
+// .modalContent {
+//   line-height: 1.4;
+//   max-width: 180px;
+//   min-width: 130px;
+//   padding: 21px 36px 21px 21px;
+//   border-radius: 5px;
+//   background-color: white;
+//   border: 0.5px solid #545f7d;
+
+//   position: fixed;
+//   top: 50%;
+//   left: 60%;
+//   transform: translate(-50%, -40%);
+// }
 
 .userAction {
   display: flex;

@@ -12,8 +12,6 @@
   font-size: 14px;
   font-style: normal;
   padding-left: 20px;
-  border-radius: 8px;
-
   font-family: "Work Sans";
 }
 
@@ -32,11 +30,11 @@
 @media (min-width: 940px) {
   .searchButton {
     display: block;
+    border-radius: 8px;
   }
 
   .searchIcon {
     display: block;
-    // align-self: center;
     border-radius: 8px;
     margin-left: -50px;
     background-color: rgb(113, 241, 241);

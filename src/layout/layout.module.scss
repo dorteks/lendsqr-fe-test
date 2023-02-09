@@ -24,5 +24,15 @@
 
 .body {
   flex-basis: 100%;
+  overflow: auto;
+  max-width: 80vw;
   background-color: #e5e5e5;
+
+  @media (min-width: 1345px) {
+    max-width: 80vw;
+  }
+
+  @media (min-width: 250px) {
+    max-width: 100vw;
+  }
 }
