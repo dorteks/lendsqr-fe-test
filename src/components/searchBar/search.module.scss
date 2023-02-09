@@ -36,13 +36,14 @@
 
   .searchIcon {
     display: block;
-    align-self: center;
+    // align-self: center;
     border-radius: 8px;
     margin-left: -50px;
     background-color: rgb(113, 241, 241);
 
     .icon {
-      display: flex;
+      margin-left: 10px;
+      display: block;
       height: 48px;
     }
   }
