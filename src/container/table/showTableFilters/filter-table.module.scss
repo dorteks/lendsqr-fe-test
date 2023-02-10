@@ -57,9 +57,15 @@ body.active-modal {
 
 // body
 .container {
-  padding: 20px;
+  width: auto;
+  padding: 8px;
   border-radius: 5px;
   background-color: white;
+
+  @media (min-width: 424px) {
+    padding: 20px;
+    width: auto;
+  }
 }
 
 .organisation {
@@ -71,10 +77,9 @@ body.active-modal {
 .select {
   width: 230px;
   height: 40px;
-  padding: 10px;
-  margin-top: 7px;
-
   opacity: 0.2;
+  margin-top: 7px;
+  padding-left: 20px;
   border-radius: 8px;
   background: #ffffff;
   border: 1px solid #213f7d;
@@ -83,11 +88,10 @@ body.active-modal {
 .input {
   height: 40px;
   width: 230px;
-  padding: 20px;
+  opacity: 0.2;
   margin-top: 7px;
   font-size: 14px;
-
-  opacity: 0.2;
+  padding-left: 20px;
   border-radius: 8px;
   background: #ffffff;
   border: 1px solid #213f7d;
@@ -125,11 +129,14 @@ body.active-modal {
 
 .button {
   display: flex;
-  margin-top: 30px;
+  margin: 30px 0px;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 30px;
   justify-content: space-between;
+
+  @media (min-width: 424px) {
+    justify-content: space-between;
+  }
 
   .reset {
     width: 98px;
@@ -155,4 +162,5 @@ body.active-modal {
   width: 60px;
   height: 30px;
   border-radius: 8px;
+  border: 1px solid rgb(155, 155, 155);
 }

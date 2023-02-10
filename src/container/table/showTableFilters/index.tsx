@@ -46,7 +46,11 @@ const FilterTable = () => {
 
               <div className={styles.date}>
                 <h3>Date</h3>
-                <input className={styles.input} placeholder="Date" />
+                <input
+                  type="date"
+                  className={styles.input}
+                  placeholder="Date"
+                />
               </div>
 
               <div className={styles.phoneNumber}>
@@ -69,7 +73,7 @@ const FilterTable = () => {
                 <button className={styles.filter}>Filter</button>
               </section>
               <button onClick={toggleModal} className={styles.close}>
-                close
+                Close
               </button>
             </div>
           </div>
