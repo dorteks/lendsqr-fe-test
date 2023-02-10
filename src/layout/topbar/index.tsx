@@ -1,10 +1,18 @@
-import React from "react";
-import styles from "./topbar.module.scss";
+import React, { useState } from "react";
 import Link from "next/link";
-import Avatar from "@/components/avatar/avatar";
+import styles from "./topbar.module.scss";
 import SearchBar from "@/components/searchBar";
+import Avatar from "@/components/avatar/avatar";
+import Sidebar from "../sidebar";
+// import Sidebar from "../sidebar";
 
 const Topbar = () => {
+  const [display, setDisplay] = useState(false);
+
+  const toggleDisplay = () => {
+    setDisplay(!display);
+  };
+
   return (
     <nav className={styles.container}>
       <Link href="/admin/users" className={styles.logo}>
@@ -30,10 +38,20 @@ const Topbar = () => {
         />
         <Avatar />
       </div>
+      <React.Fragment>
+        <div onClick={toggleDisplay} className={styles.openMenu}>
+          <img src="/images/hamburger.png" />
+        </div>
 
-      <div className={styles.openMenu}>
-        <img src="/images/hamburger.png" />
-      </div>
+        {display && (
+          <div className={styles.menuTopbar}>
+            <button className={styles.closeButton} onClick={toggleDisplay}>
+              Close
+            </button>
+            <Sidebar />
+          </div>
+        )}
+      </React.Fragment>
     </nav>
   );
 };

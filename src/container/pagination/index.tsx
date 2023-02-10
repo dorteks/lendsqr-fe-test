@@ -8,7 +8,7 @@ const Pagination = () => {
         <h4 className={styles.showing}>Showing</h4>
 
         <button className={styles.next100button}>
-          <h5>100</h5>
+          <h5>10</h5>
           <img src="/images/np-next-down.svg" alt="show next 100" />
         </button>
 
