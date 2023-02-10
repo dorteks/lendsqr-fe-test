@@ -3,10 +3,12 @@ import Link from "next/link";
 import styles from "./table.module.scss";
 import useTableData from "./useTableData";
 import { ShowUserActions } from "../showUserActions";
+import { inactivePill } from "@/components/statusPill";
 
 const Table = () => {
+  // making use of data from useTableData hook
   const onSuccess = () => {
-    console.log("fetching data");
+    console.log("success - (fetched data) ");
   };
   const onError = (error: any) => {
     console.log("error", error);
@@ -78,51 +80,6 @@ const Table = () => {
         </thead>
 
         <tbody>
-          <tr className={styles.tdata}>
-            <td>Lensqr</td>
-            <td>dorteks</td>
-            <td>dorteks@gmail.com</td>
-            <td>909949494949</td>
-            <td>May 15, 2022 10:00AM</td>
-            <td>
-              <button className={styles.active}>
-                <h3>Active</h3>
-              </button>
-            </td>
-            <td>
-              <ShowUserActions />
-            </td>
-          </tr>
-          <tr className={styles.tdata}>
-            <td>Lensqr</td>
-            <td>dorteks</td>
-            <td>dorteks@gmail.com</td>
-            <td>909949494949</td>
-            <td>May 15, 2022 10:00AM</td>
-            <td>
-              <button className={styles.inactive}>
-                <h3>Inactive</h3>
-              </button>
-            </td>
-            <td>
-              <ShowUserActions />
-            </td>
-          </tr>
-          <tr className={styles.tdata}>
-            <td>Lensqr</td>
-            <td>dorteks</td>
-            <td>dorteks@gmail.com</td>
-            <td>909949494949</td>
-            <td>May 15, 2022 10:00AM</td>
-            <td>
-              <button className={styles.pending}>
-                <h3>Pending</h3>
-              </button>
-            </td>
-            <td>
-              <ShowUserActions />
-            </td>
-          </tr>
           {dataTable?.data.map((user: any) => {
             return (
               <tr key={user.id} className={styles.tdata}>
@@ -147,11 +104,7 @@ const Table = () => {
                   <Link href={`/admin/users/` + user.id}>{user.createdAt}</Link>
                 </td>
                 <td>
-                  <Link href={`/admin/users/` + user.id}>
-                    <button className={styles.blacklisted}>
-                      <h3>Blacklisted</h3>
-                    </button>
-                  </Link>
+                  <Link href={`/admin/users/` + user.id}>{inactivePill()}</Link>
                 </td>
                 <td>
                   <ShowUserActions />

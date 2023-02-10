@@ -9,11 +9,13 @@ export const ShowUserActions = () => {
     setModal(!modal);
   };
 
-  if (modal) {
-    document.body.classList.add("active-modal");
-  } else {
-    document.body.classList.remove("active-modal");
-  }
+  // if (modal) {
+  //   document.body.classList.add("active-modal");
+  // } else {
+  //   document.body.classList.remove("active-modal");
+  // }
+
+  // logic for changing user status
 
   return (
     <>
@@ -31,15 +33,17 @@ export const ShowUserActions = () => {
             >
               <FilterTable />
             </div>
+
             <div
-              onClick={() => console.log("clicked blacklist user")}
+              onClick={() => console.log("blacklisted user")}
               className={styles.userAction}
             >
               <img src="/images/blacklist-user.svg" alt="blacklist user" />
               <h4>Blacklist User</h4>
             </div>
+
             <div
-              onClick={() => console.log("clicked activate user")}
+              onClick={() => console.log("activated user")}
               className={styles.userAction}
             >
               <img src="/images/activate-user.svg" alt="activate user" />

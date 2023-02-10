@@ -29,10 +29,10 @@ const FilterTable = () => {
               <div className={styles.organisation}>
                 <h3>Organisation</h3>
                 <select className={styles.select}>
-                  <option>Select</option>
-                  <option>ASDF</option>
-                  <option>DUYUS</option>
-                  <option>LOSH</option>
+                  <option>Lendsqr</option>
+                  <option>Lendsqr</option>
+                  <option>Lendsqr</option>
+                  <option>Lendsqr</option>
                 </select>
               </div>
               <div className={styles.userName}>
@@ -61,9 +61,9 @@ const FilterTable = () => {
               <div className={styles.status}>
                 <h3>Status</h3>
                 <select className={styles.select}>
-                  <option>Select</option>
-                  <option>Iactive</option>
+                  <option>Inactive</option>
                   <option>Active</option>
+                  <option>Pending</option>
                   <option>Blacklisted</option>
                 </select>
               </div>

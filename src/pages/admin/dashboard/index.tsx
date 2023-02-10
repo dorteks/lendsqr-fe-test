@@ -1,8 +1,8 @@
-import Pagination from "@/container/pagination";
-import Table from "@/container/table/tableData/table";
-import Layout from "@/layout";
 import React from "react";
+import Layout from "@/layout";
 import styles from "./dashboard.module.scss";
+import Pagination from "@/container/pagination";
+import DashboardTable from "@/container/table/dashboardTable/dashboardTable";
 
 const Dashboard = () => {
   return (
@@ -55,7 +55,7 @@ const Dashboard = () => {
           })}
         </section>
 
-        <Table />
+        <DashboardTable />
 
         <Pagination />
       </main>

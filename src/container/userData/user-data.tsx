@@ -6,7 +6,7 @@ import styles from "./user-data.module.scss";
 
 const UserData = () => {
   const onSuccess = () => {
-    console.log("fetching data");
+    console.log("success (fetched data)");
   };
   const onError = () => {
     console.log("error fetching data");
