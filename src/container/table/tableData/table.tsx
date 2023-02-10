@@ -129,14 +129,29 @@ const Table = () => {
                 <td className={styles.data}>
                   <Link href={`/admin/users/` + user.id}>{user.orgName}</Link>
                 </td>
-                <td>{user.userName}</td>
-                <td>{user.email}</td>
-                <td>{user.phoneNumber}</td>
-                <td>{user.createdAt}</td>
                 <td>
-                  <button className={styles.blacklisted}>
-                    <h3>Blacklisted</h3>
-                  </button>
+                  <Link href={`/admin/users/` + user.id}>{user.userName}</Link>
+                </td>
+                <td>
+                  {" "}
+                  <Link href={`/admin/users/` + user.id}>{user.email}</Link>
+                </td>
+                <td>
+                  {" "}
+                  <Link href={`/admin/users/` + user.id}>
+                    {user.phoneNumber}
+                  </Link>
+                </td>
+                <td>
+                  {" "}
+                  <Link href={`/admin/users/` + user.id}>{user.createdAt}</Link>
+                </td>
+                <td>
+                  <Link href={`/admin/users/` + user.id}>
+                    <button className={styles.blacklisted}>
+                      <h3>Blacklisted</h3>
+                    </button>
+                  </Link>
                 </td>
                 <td>
                   <ShowUserActions />
