@@ -43,14 +43,13 @@ const Login = () => {
             required={true}
             maxLength={"50"}
             placeholder="Email"
-            value={"admin/ayodele@lendsqr.com"}
             onChange={(e: any) => e.target.value}
           />
           <div className={styles.passwordInput}>
             <Input
               type={passwordType}
-              // value={passwordInput}
-              value="1234567890"
+              value={passwordInput}
+              // value="1234567890"
               required={true}
               minLength={"6"}
               maxLength={"30"}
