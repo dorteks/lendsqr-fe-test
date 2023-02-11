@@ -32,7 +32,9 @@ body.active-modal {
   padding: 14px 28px;
   border-radius: 5px;
   background-color: white;
-  border: 0.5px solid #545f7d;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
   position: absolute;
   top: 40%;
   left: 50%;
@@ -129,7 +131,7 @@ body.active-modal {
 
 .button {
   display: flex;
-  margin: 30px 0px;
+  margin-top: 30px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -156,11 +158,4 @@ body.active-modal {
     background: #39cdcc;
     border: 1px solid #39cdcc;
   }
-}
-
-.close {
-  width: 60px;
-  height: 30px;
-  border-radius: 8px;
-  border: 1px solid rgb(155, 155, 155);
 }

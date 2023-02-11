@@ -9,14 +9,6 @@ export const ShowUserActions = () => {
     setModal(!modal);
   };
 
-  // if (modal) {
-  //   document.body.classList.add("active-modal");
-  // } else {
-  //   document.body.classList.remove("active-modal");
-  // }
-
-  // logic for changing user status
-
   return (
     <>
       <button onClick={toggleModal} className={styles.btnModal}>
