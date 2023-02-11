@@ -1,14 +1,26 @@
 .container {
   height: auto;
-  min-width: 1150px;
+  width: 1310px;
   padding: 1.5em;
+  min-width: 100%;
   font-style: normal;
   background: #fafafa;
   font-family: "Work Sans";
   border: 1px solid rgba(33, 63, 125, 0.06);
 
-  @media (min-width: 1340px) {
+  @media (min-width: 1430px) {
     padding: 3em;
+    padding-left: 290px;
+  }
+
+  @media (min-width: 800px) {
+    padding: 3em;
+    padding-left: 290px;
+  }
+
+  @media (min-width: 769px) {
+    padding: 3em;
+    padding-left: 280px;
   }
 }
 
@@ -47,4 +59,9 @@
     color: #213f7d;
     text-transform: uppercase;
   }
+}
+
+.tableBox {
+  margin-top: 40px;
+  max-width: 1310px;
 }

@@ -52,7 +52,9 @@ const BodyContainer = () => {
         })}
       </section>
 
-      <Table />
+      <section className={styles.tableBox}>
+        <Table />
+      </section>
     </main>
   );
 };
