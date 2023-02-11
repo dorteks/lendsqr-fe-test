@@ -15,7 +15,7 @@ const Topbar = () => {
 
   return (
     <nav className={styles.container}>
-      <Link href="/admin/users" className={styles.logo}>
+      <Link href="/admin/dashboard" className={styles.logo}>
         <img src="/images/logo.svg" alt="logo" />
       </Link>
 
