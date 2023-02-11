@@ -14,7 +14,7 @@ const Sidebar = () => {
             alt: "organisation",
             text: "Switch Organisation",
             arrow: "/images/arrow-down.svg",
-            href: "/",
+            href: "",
           },
           {
             id: 2,
@@ -25,16 +25,18 @@ const Sidebar = () => {
           },
         ].map((item) => {
           return (
-            <div key={item.id} className={styles.header}>
-              <div className={styles.menuButton}>
-                <img src={item.img} alt={item.alt} />
-              </div>
-
+            <div key={item.id} className={styles.group}>
               <Link href={item.href}>
-                <h3 className={styles.text}>{item.text} </h3>
-              </Link>
+                <div className={styles.header}>
+                  <div className={styles.menuButton}>
+                    <img src={item.img} alt={item.alt} />
+                  </div>
 
-              <img className={styles.arrowDown} src={item.arrow} alt="" />
+                  <h3 className={styles.text}>{item.text} </h3>
+
+                  <img className={styles.arrowDown} src={item.arrow} alt="" />
+                </div>
+              </Link>
             </div>
           );
         })}
@@ -103,12 +105,14 @@ const Sidebar = () => {
           },
         ].map((item) => {
           return (
-            <div key={item.id} className={styles.menu}>
-              <div className={styles.menuButton}>
-                <img src={item.img} alt={item.alt} />
-              </div>
+            <div key={item.id} className={styles.group}>
               <Link href={item.url}>
-                <h3 className={styles.text}>{item.text} </h3>
+                <div className={styles.menu}>
+                  <div className={styles.menuButton}>
+                    <img src={item.img} alt={item.alt} />
+                  </div>
+                  <h3 className={styles.text}>{item.text} </h3>
+                </div>
               </Link>
             </div>
           );
@@ -175,12 +179,14 @@ const Sidebar = () => {
           },
         ].map((item) => {
           return (
-            <div key={item.id} className={styles.menu}>
-              <div className={styles.menuButton}>
-                <img src={item.img} alt={item.alt} />
-              </div>
+            <div key={item.id} className={styles.group}>
+              <div className={styles.menu}>
+                <div className={styles.menuButton}>
+                  <img src={item.img} alt={item.alt} />
+                </div>
 
-              <h3 className={styles.text}>{item.text} </h3>
+                <h3 className={styles.text}>{item.text} </h3>
+              </div>
             </div>
           );
         })}
@@ -210,12 +216,14 @@ const Sidebar = () => {
           },
         ].map((item) => {
           return (
-            <div key={item.id} className={styles.menu}>
-              <div className={styles.menuButton}>
-                <img src={item.img} alt={item.alt} />
-              </div>
+            <div key={item.id} className={styles.group}>
+              <div className={styles.menu}>
+                <div className={styles.menuButton}>
+                  <img src={item.img} alt={item.alt} />
+                </div>
 
-              <h3 className={styles.text}>{item.text} </h3>
+                <h3 className={styles.text}>{item.text} </h3>
+              </div>
             </div>
           );
         })}
@@ -225,15 +233,17 @@ const Sidebar = () => {
       <hr className={styles.divider} />
 
       <section className={styles.menuContainer}>
-        <div className={styles.logout}>
-          <img
-            alt="signout"
-            className={styles.icon}
-            src="/images/sign-out.png"
-          />
-          <Link href="/">
-            <h3 className={styles.text}>Logout</h3>
-          </Link>
+        <div className={styles.group}>
+          <div className={styles.logout}>
+            <img
+              alt="signout"
+              className={styles.icon}
+              src="/images/sign-out.png"
+            />
+            <Link href="/">
+              <h3 className={styles.text}>Logout</h3>
+            </Link>
+          </div>
         </div>
       </section>
 

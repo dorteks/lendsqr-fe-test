@@ -13,8 +13,8 @@
 .sidebar {
   flex-grow: 0;
   display: none;
-
-  background-color: #ffffff;
+  background-color: white;
+  border-right: 3px solid rgba(160, 165, 175, 0.06);
 
   @media (min-width: 769px) {
     display: flex;

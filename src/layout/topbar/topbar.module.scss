@@ -5,6 +5,7 @@
   align-items: center;
   background-color: #ffffff;
   justify-content: space-between;
+  border-bottom: 3px solid rgba(160, 165, 175, 0.06);
 
   @media (min-width: 450px) {
     padding: 20px 30px;
@@ -12,13 +13,20 @@
 }
 
 .actions {
-  display: flex;
-  align-items: center;
   gap: 32px;
+  display: flex;
   display: none;
+  align-items: center;
 
   @media (min-width: 650px) {
     display: flex;
+  }
+
+  .docs {
+    color: #213f7d;
+    font-size: 16px;
+    text-underline-position: below;
+    text-decoration-line: underline;
   }
 }
 
@@ -46,7 +54,6 @@
     width: 18px;
     height: 18px;
     margin: auto;
-    color: red;
     display: block;
   }
 

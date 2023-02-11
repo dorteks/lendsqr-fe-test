@@ -8,7 +8,11 @@ type Props = {
 const SearchBar = (props: Props) => {
   return (
     <div className={styles.container}>
-      <input className={styles.searchButton} placeholder={props.placeholder} />
+      <input
+        type="search"
+        className={styles.searchButton}
+        placeholder={props.placeholder}
+      />
       <div className={styles.searchIcon}>
         <img
           className={styles.icon}
