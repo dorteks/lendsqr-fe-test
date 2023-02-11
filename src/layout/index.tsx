@@ -10,8 +10,9 @@ type Props = {
 const Layout = (props: Props) => {
   return (
     <main className={styles.layout}>
-      <Topbar />
-
+      <div className={styles.topbar}>
+        <Topbar />
+      </div>
       <section className={styles.content}>
         <div className={styles.sidebar}>
           <Sidebar />

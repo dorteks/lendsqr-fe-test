@@ -1,13 +1,11 @@
 .container {
   display: flex;
-  background: #ffffff;
-  border: 1px solid inherit;
 }
 
 .searchButton {
   width: 25em;
+  height: 2.5em;
   opacity: 0.7;
-  height: 3.5em;
   display: none;
   font-size: 14px;
   font-style: normal;
@@ -15,34 +13,41 @@
   font-family: "Work Sans";
 }
 
+// search for mobile screen
 .searchIcon {
-  width: 3em;
+  width: 3.5em;
+  height: 2.5em;
   display: none;
   background-color: aqua;
 
   .icon {
-    width: 24px;
-    height: 24px;
+    width: 14px;
+    height: 14px;
     display: none;
   }
 }
 
+// search for bigger screens
 @media (min-width: 940px) {
   .searchButton {
     display: block;
     border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid #666970;
   }
 
   .searchIcon {
+    width: 3.5em;
+    height: 2.15em;
     display: block;
-    border-radius: 8px;
-    margin-left: -50px;
-    background-color: rgb(113, 241, 241);
+    margin-left: -57px;
+    border-radius: 5px;
+    background-color: rgb(0, 238, 255);
 
     .icon {
-      margin-left: 10px;
       display: block;
-      height: 48px;
+      margin: auto;
+      margin-top: 10px;
     }
   }
 }

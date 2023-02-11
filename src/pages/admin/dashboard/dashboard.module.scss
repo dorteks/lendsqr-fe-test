@@ -1,10 +1,12 @@
 .container {
   height: auto;
-  min-width: 1150px;
   padding: 1.5em;
+  min-width: 1150px;
   font-style: normal;
   background: #fafafa;
   font-family: "Work Sans";
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  // box-shadow: 3px 5px 40px rgba(165, 159, 159, 0.04);
 
   @media (min-width: 1340px) {
     padding: 3em;

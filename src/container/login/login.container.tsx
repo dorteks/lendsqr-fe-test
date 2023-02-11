@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Input from "@/components/input";
 import Button from "@/components/button";
 import styles from "./login.module.scss";
 
 const Login = () => {
-  // const inputEmail = "admin@lendsqr.com";
-  // const inputPassword = "************";
+  const [passwordType, setPasswordType] = useState("password");
+  const [passwordInput, setPasswordInput] = useState("");
+  console.log(passwordInput);
+
+  const toggleShowPassword = () => {
+    console.log("Clicked");
+    if (passwordType === "password") {
+      setPasswordType("text");
+      return;
+    }
+    setPasswordType("password");
+  };
 
   return (
     <main className={styles.main}>
@@ -27,17 +37,36 @@ const Login = () => {
         <div className={styles.container}>
           <h1 className={styles.welcome}>Welcome!</h1>
           <h3 className={styles.details}>Enter details to login.</h3>
-          <Input placeholder="Email" value={undefined} />
-          <Input placeholder="Password" value={undefined} />
+          <Input
+            type="email"
+            minLength={"8"}
+            required={true}
+            maxLength={"50"}
+            placeholder="Email"
+            value={"admin/ayodele@lendsqr.com"}
+            onChange={(e: any) => e.target.value}
+          />
+          <div className={styles.passwordInput}>
+            <Input
+              type={passwordType}
+              // value={passwordInput}
+              value="1234567890"
+              required={true}
+              minLength={"6"}
+              maxLength={"30"}
+              placeholder="Password"
+              onChange={(e: any) => setPasswordInput(e.target.value)}
+            />
+            <span onClick={toggleShowPassword} className={styles.show}>
+              SHOW
+            </span>
+          </div>
+
           <Link className={styles.forgotPassword} href="/forgot-password">
             forgot password?
           </Link>
-          <Button title="Log in" />
-          <Link href="/admin/dashboard">
-            <p className={styles.dashboardPage}>Go to dashboard page </p>
-          </Link>
-          <Link href="/admin/users">
-            <p className={styles.userPage}>Go to Users page </p>
+          <Link href={"/admin/dashboard"}>
+            <Button title="Log in" />
           </Link>
         </div>
       </section>

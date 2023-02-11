@@ -1,11 +1,16 @@
 .container {
   width: 100%;
   min-width: 250px;
-  // background-color: red;
   position: static;
 }
 
 // top - dashboard section
+.group {
+  :hover {
+    border-left: 5px solid #39cdcc;
+  }
+}
+
 .header {
   height: 40px;
   display: flex;
@@ -13,6 +18,10 @@
   flex-direction: row;
   align-items: center;
   padding-left: 30px;
+
+  :hover {
+    border-left: 1px solid white;
+  }
 }
 
 .arrowDown {
@@ -30,12 +39,6 @@
 }
 
 .menuContainer {
-  :hover {
-    opacity: 0.6;
-    padding-left: none;
-    background-color: #39cdcc;
-  }
-
   .menu {
     height: 40px;
     display: flex;
@@ -43,6 +46,10 @@
     margin-bottom: 10px;
     flex-direction: row;
     align-items: center;
+
+    :hover {
+      border-left: 1px solid white;
+    }
   }
 
   .menuButton {
@@ -51,6 +58,10 @@
     display: flex;
     margin-right: 10px;
     flex-direction: column;
+
+    :hover {
+      border: 0px solid white;
+    }
   }
 
   .text {
@@ -73,6 +84,10 @@
   padding-left: 30px;
   flex-direction: row;
   align-items: center;
+
+  :hover {
+    border-left: 1px solid white;
+  }
 }
 
 .icon {
