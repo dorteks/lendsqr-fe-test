@@ -97,40 +97,40 @@ const UserData = () => {
         <section className={styles.info}>
           <div>
             <h5>full name</h5>
-            <h3>
+            <h3 className={styles.value}>
               {data?.data.profile.firstName} {data?.data.profile.lastName}
             </h3>
           </div>
           <div>
             <h5>phone number</h5>
-            <h3>{data?.data.phoneNumber}</h3>
+            <h3 className={styles.value}>{data?.data.phoneNumber}</h3>
           </div>
           <div>
             <h5>email address</h5>
-            <h3>{data?.data.email}</h3>
+            <h3 className={styles.emailText}>{data?.data.email}</h3>
           </div>
 
           <div>
             <h5>bvn</h5>
-            <h3>{data?.data.profile.bvn}</h3>
+            <h3 className={styles.value}>{data?.data.profile.bvn}</h3>
           </div>
           <div>
             <h5>gender</h5>
-            <h3>{data?.data.profile.gender}</h3>
+            <h3 className={styles.value}>{data?.data.profile.gender}</h3>
           </div>
           <div>
             <h5>marital status</h5>
-            <h3>Single</h3>
+            <h3 className={styles.value}>Single</h3>
             {/* <h3>{data?.data}</h3> */}
           </div>
           <div>
             <h5>children</h5>
-            <h3>None</h3>
+            <h3 className={styles.value}>None</h3>
             {/* <h3>{data?.data}</h3> */}
           </div>
           <div>
             <h5>type of residence</h5>
-            <h3>Parents&apos;s Apartment</h3>
+            <h3 className={styles.value}> Parents&apos;s Apartment</h3>
             {/* <h3>{data?.data}</h3> */}
           </div>
         </section>
@@ -144,27 +144,31 @@ const UserData = () => {
         <section className={styles.info}>
           <div>
             <h5>level of education</h5>
-            <h3>{data?.data.education.level}</h3>
+            <h3 className={styles.value}>{data?.data.education.level}</h3>
           </div>
           <div>
             <h5>employment status</h5>
-            <h3>{data?.data.education.employmentStatus}</h3>
+            <h3 className={styles.value}>
+              {data?.data.education.employmentStatus}
+            </h3>
           </div>
           <div>
             <h5>sector of employment</h5>
-            <h3>{data?.data.education.sector}</h3>
+            <h3 className={styles.value}>{data?.data.education.sector}</h3>
           </div>
           <div>
             <h5>duration of employment</h5>
-            <h3>{data?.data.education.duration}</h3>
+            <h3 className={styles.value}>{data?.data.education.duration}</h3>
           </div>{" "}
           <div>
             <h5>office email</h5>
-            <h3>{data?.data.education.officeEmail}</h3>
+            <h3 className={styles.officeEmail}>
+              {data?.data.education.officeEmail}
+            </h3>
           </div>
           <div>
             <h5>monthly income</h5>
-            <h3>
+            <h3 className={styles.value}>
               {data?.data.profile.currency}{" "}
               {data?.data.education.monthlyIncome[0]} -{" "}
               {data?.data.profile.currency}{" "}
@@ -173,7 +177,7 @@ const UserData = () => {
           </div>
           <div>
             <h5>loan repayment</h5>
-            <h3>
+            <h3 className={styles.value}>
               {" "}
               {data?.data.profile.currency} {data?.data.education.loanRepayment}
             </h3>
@@ -189,15 +193,15 @@ const UserData = () => {
         <section className={styles.info}>
           <div>
             <h5>twitter</h5>
-            <h3>{data?.data.socials.twitter}</h3>
+            <h3 className={styles.value}>{data?.data.socials.twitter}</h3>
           </div>
           <div>
             <h5>facebook</h5>
-            <h3>{data?.data.socials.facebook}</h3>
+            <h3 className={styles.value}>{data?.data.socials.facebook}</h3>
           </div>
           <div>
             <h5>instagram</h5>
-            <h3>{data?.data.socials.instagram}</h3>
+            <h3 className={styles.value}> {data?.data.socials.instagram}</h3>
           </div>
         </section>
         <img
@@ -210,21 +214,21 @@ const UserData = () => {
         <section className={styles.info}>
           <div>
             <h5>full name</h5>
-            <h3>
+            <h3 className={styles.value}>
               {data?.data.guarantor.firstName} {data?.data.guarantor.lastName}
             </h3>
           </div>
           <div>
             <h5>phone number</h5>
-            <h3>{data?.data.guarantor.phoneNumber}</h3>
+            <h3 className={styles.value}>{data?.data.guarantor.phoneNumber}</h3>
           </div>
           <div>
             <h5> address</h5>
-            <h3>{data?.data.guarantor.address} </h3>
+            <h3 className={styles.value}>{data?.data.guarantor.address} </h3>
           </div>
           <div>
             <h5>gender</h5>
-            <h3>{data?.data.guarantor.gender} </h3>
+            <h3 className={styles.value}>{data?.data.guarantor.gender} </h3>
           </div>
         </section>
       </section>

@@ -15,6 +15,7 @@ const useTableData = (onSuccess: any, onError: any) => {
   return useQuery(["tableData"], fetchTableData, {
     onSuccess: onSuccess,
     onError: onError,
+    refetchOnWindowFocus: false,
   });
 };
 

@@ -5,20 +5,29 @@
 }
 
 .content {
-  height: 100%;
   display: flex;
+  max-height: 100%;
+  padding-top: 93px;
   flex-direction: row;
 }
 
 .sidebar {
   flex-grow: 0;
   display: none;
+  overflow-y: auto;
   background-color: white;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   border-right: 3px solid rgba(160, 165, 175, 0.06);
 
+  // sidebar fixed position??
   @media (min-width: 769px) {
     display: flex;
+    position: fixed;
+    max-height: 90%;
     flex-basis: 20%;
+    min-width: 250px;
+    overflow-y: auto;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   }
 }
 

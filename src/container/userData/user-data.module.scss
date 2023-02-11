@@ -5,6 +5,7 @@
   padding-top: 4rem;
   min-height: 100vh;
   font-style: normal;
+  padding-left: 300px;
   background: #fafafa;
   font-family: "Work Sans";
   border: 1px solid rgba(33, 63, 125, 0.06);
@@ -138,7 +139,7 @@
     .tabsBorder {
       width: 15%;
       text-align: center;
-      padding-bottom: 30px;
+      padding-bottom: 10px;
       border-bottom: solid;
       border-color: white;
     }
@@ -199,6 +200,51 @@
     .empty {
       margin-bottom: 40px;
     }
+
+    .emailText {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 1400px) {
+      .emailText {
+        font-size: 14px;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .emailText {
+        font-size: 12px;
+      }
+      .value,
+      .officeEmail {
+        font-size: 12px;
+      }
+    }
+
+    @media screen and (max-width: 630px) {
+      .emailText {
+        font-size: 11px;
+      }
+      .value,
+      .officeEmail {
+        font-size: 12px;
+      }
+    }
+
+    @media screen and (max-width: 425px) {
+      .emailText {
+        font-size: 10px;
+      }
+      .value {
+        font-size: 12px;
+      }
+    }
+
+    @media screen and (max-width: 374px) {
+      .officeEmail {
+        font-size: 10px;
+      }
+    }
   }
 }
 
@@ -207,6 +253,7 @@
   .container {
     padding: 1em;
     padding-top: 4rem;
+    padding-left: 270px;
   }
 }
 
@@ -215,6 +262,7 @@
   .container {
     padding: 1em;
     padding-top: 3rem;
+    padding-left: 260px;
   }
 
   .userDetails {
@@ -274,11 +322,21 @@
   }
 }
 
+//width 560px-768px
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5em;
+    padding-top: 3rem;
+    padding-left: 10px;
+  }
+}
+
 // width 480px - 560px
 @media (max-width: 560px) {
   .container {
     padding: 0.5em;
     padding-top: 3rem;
+    padding-left: 10px;
   }
 
   .userActions {
@@ -326,6 +384,7 @@
   .container {
     padding: 0.5em;
     padding-top: 4rem;
+    padding-left: 10px;
   }
 
   .userActions {
@@ -411,7 +470,7 @@
   }
 
   .generalDetails {
-    padding-left: 5px;
+    padding-left: 10px;
     padding-right: 10px;
 
     h4 {
