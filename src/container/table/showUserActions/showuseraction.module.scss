@@ -14,7 +14,7 @@ body.active-modal {
   width: 180px;
   height: 130px;
   position: absolute;
-  background-color: white;
+  // background-color: white;
 
   top: 50;
   left: 50;
@@ -25,56 +25,24 @@ body.active-modal {
   padding-left: 25px;
   padding-top: 25px;
   border: 1px solid rgba(84, 95, 125, 0.04);
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 }
 
 .overlay {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 10px;
-  height: 10px;
-  background-color: wheat;
-
+  width: 50vw;
+  height: 70vh;
   position: fixed;
-  top: 40%;
-  left: 95%;
+  top: 50%;
+  left: 65%;
   transform: translate(-50%, -40%);
 }
 
 .modalContent {
-  max-width: 180px;
-  min-width: 130px;
+  width: 180px;
+  width: 130px;
+  margin-top: 30px;
   border-radius: 5px;
-  background-color: white;
+  // background-color: red;
 }
-
-// .modal,
-// .overlay {
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   position: fixed;
-// }
-
-// .modalContent {
-//   line-height: 1.4;
-//   max-width: 180px;
-//   min-width: 130px;
-//   padding: 21px 36px 21px 21px;
-//   border-radius: 5px;
-//   background-color: white;
-//   border: 0.5px solid #545f7d;
-
-//   position: fixed;
-//   top: 50%;
-//   left: 60%;
-//   transform: translate(-50%, -40%);
-// }
 
 .userAction {
   display: flex;

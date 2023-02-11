@@ -72,9 +72,6 @@ const FilterTable = () => {
                 <button className={styles.reset}>Reset</button>
                 <button className={styles.filter}>Filter</button>
               </section>
-              <button onClick={toggleModal} className={styles.close}>
-                Close
-              </button>
             </div>
           </div>
         </section>
