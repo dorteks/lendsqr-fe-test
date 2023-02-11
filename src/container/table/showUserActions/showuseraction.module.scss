@@ -11,37 +11,35 @@ body.active-modal {
 
 .modal,
 .overlay {
-  width: 180px;
-  height: 130px;
-  position: absolute;
-  // background-color: white;
-
-  top: 50;
-  left: 50;
   right: 0;
   bottom: 50;
-
+  padding-top: 25px;
+  position: absolute;
   border-radius: 4px;
   padding-left: 25px;
-  padding-top: 25px;
-  border: 1px solid rgba(84, 95, 125, 0.04);
 }
 
 .overlay {
-  width: 50vw;
-  height: 70vh;
+  width: 100px;
+  height: 100px;
   position: fixed;
   top: 50%;
   left: 65%;
   transform: translate(-50%, -40%);
+
+  @media (min-width: 1030px) {
+    width: 50vw;
+    height: 70vw;
+  }
 }
 
 .modalContent {
   width: 180px;
-  width: 130px;
+  padding: 20px;
   margin-top: 30px;
   border-radius: 5px;
-  // background-color: red;
+  background-color: white;
+  border: 1px solid rgba(84, 95, 125, 0.04);
 }
 
 .userAction {
