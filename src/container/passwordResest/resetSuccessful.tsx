@@ -8,7 +8,7 @@ const ResetPasswordSuccessful = () => {
     <section className={styles.container}>
       <div className={styles.keyIcon}>
         <img
-          src="/images/password-reset-successful.png"
+          src="/images/reset-password-successful.jpeg"
           alt="forgot-password"
         />
       </div>

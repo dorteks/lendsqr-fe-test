@@ -1,9 +1,30 @@
-import React from "react";
+import Link from "next/link";
+import React, { useState } from "react";
 import Button from "@/components/button";
 import styles from "./newPassword.module.scss";
-import Link from "next/link";
 
 const NewPassword = () => {
+  const [typePassword, setTypePassword] = useState("password");
+  const toggleTypePassword = () => {
+    if (typePassword === "password") {
+      setTypePassword("text");
+      return;
+    }
+    setTypePassword("password");
+  };
+
+  const [typeConfirmPassword, setTypeConfirmPassword] = useState("password");
+  const toggleTypeConfirmPassword = () => {
+    if (typeConfirmPassword === "password") {
+      setTypeConfirmPassword("text");
+      return;
+    }
+    setTypeConfirmPassword("password");
+  };
+
+  const [inputPassword, setInputPassword] = useState("");
+  const [inputConfirmPassword, setInputConfirmPassword] = useState("");
+
   return (
     <section className={styles.container}>
       <div className={styles.keyIcon}>
@@ -17,10 +38,33 @@ const NewPassword = () => {
       </div>
       <div className={styles.buttons}>
         <label>Password</label>
-        <input className={styles.passwordInput} placeholder="Password" />
+        <div className={styles.passwordGroup}>
+          <input
+            type={typePassword}
+            value={inputPassword}
+            placeholder="Password"
+            className={styles.passwordInput}
+            onChange={(e: any) => setInputPassword(e.target.value)}
+          />
+          <h3 onClick={toggleTypePassword} className={styles.show}>
+            SHOW
+          </h3>
+        </div>
+
         <h4>Must be at least 8 characters</h4>
+
         <label>Confirm password</label>
-        <input placeholder="Confirm password" />
+        <div className={styles.confirmPasswordGroup}>
+          <input
+            type={typeConfirmPassword}
+            value={inputConfirmPassword}
+            placeholder="Confirm password"
+            onChange={(e: any) => setInputConfirmPassword(e.target.value)}
+          />
+          <h3 className={styles.show} onClick={toggleTypeConfirmPassword}>
+            SHOW
+          </h3>
+        </div>
         <Link href="/auth/reset-successful">
           <Button title={"Reset Password"} />
         </Link>
