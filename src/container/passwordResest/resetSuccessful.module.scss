@@ -1,0 +1,76 @@
+.container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  margin-top: 15vh;
+  max-width: 450px;
+  padding: 0px 15px;
+  flex-direction: column;
+}
+
+.keyIcon {
+  width: 40px;
+  margin: auto;
+  height: 40px;
+}
+
+.forgotPassword {
+  padding-top: 20px;
+  h1 {
+    color: #213f7d;
+    font-size: 30px;
+    text-align: center;
+  }
+  h3 {
+    color: #545f7d;
+    font-size: 16px;
+    padding-top: 10px;
+    text-align: center;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: left;
+  padding-top: 30px;
+  flex-direction: column;
+
+  label {
+    color: #213f7d;
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  input {
+    height: 3em;
+    display: block;
+    font-size: 14px;
+    padding-left: 20px;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    background: #ffffff;
+    border: 2px solid rgba(84, 95, 125, 0.15);
+  }
+
+  Button {
+    margin-top: 5px;
+  }
+}
+
+.backButton {
+  gap: 10px;
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  h3 {
+    color: #545f7d;
+    font-size: 14px;
+  }
+}
