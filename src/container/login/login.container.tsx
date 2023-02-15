@@ -1,6 +1,6 @@
-import React, { useState } from "react";
 import Link from "next/link";
 import Input from "@/components/input";
+import React, { useState } from "react";
 import Button from "@/components/button";
 import styles from "./login.module.scss";
 
@@ -61,7 +61,7 @@ const Login = () => {
             </span>
           </div>
 
-          <Link className={styles.forgotPassword} href="/forgot-password">
+          <Link className={styles.forgotPassword} href="/auth/forgot-password">
             forgot password?
           </Link>
           <Link href={"/admin/dashboard"}>
