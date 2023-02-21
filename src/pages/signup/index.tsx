@@ -2,9 +2,9 @@ import Link from "next/link";
 import Input from "@/components/input";
 import React, { useState } from "react";
 import Button from "@/components/button";
-import styles from "./login.module.scss";
+import styles from "./signup.module.scss";
 
-const Login = () => {
+const Signup = () => {
   const [passwordType, setPasswordType] = useState("password");
   const [passwordInput, setPasswordInput] = useState("");
   console.log(passwordInput);
@@ -40,14 +40,32 @@ const Login = () => {
           className={styles.logoMain}
         />
         <div className={styles.container}>
-          <h1 className={styles.welcome}>Welcome!</h1>
-          <h3 className={styles.details}>Enter details to login.</h3>
+          <h1 className={styles.register}>Register</h1>
+          <h3 className={styles.details}>
+            Create an account by entering your details here.
+          </h3>
+          <Input
+            type="text"
+            minLength={"8"}
+            required={true}
+            maxLength={"50"}
+            placeholder="Full Name"
+            onChange={(e: any) => e.target.value}
+          />
           <Input
             type="email"
             minLength={"8"}
             required={true}
             maxLength={"50"}
             placeholder="Email"
+            onChange={(e: any) => e.target.value}
+          />
+          <Input
+            type="text"
+            minLength={"8"}
+            required={true}
+            maxLength={"50"}
+            placeholder="Phone"
             onChange={(e: any) => e.target.value}
           />
           <div className={styles.passwordInput}>
@@ -66,17 +84,21 @@ const Login = () => {
             </span>
           </div>
 
-          <Link className={styles.forgotPassword} href="/auth/forgot-password">
-            forgot password?
-          </Link>
+          <div className={styles.termsAndCondition}>
+            <h4>
+              By continuing, you agree to Lendsqr&apos;s{" "}
+              <a>Business Terms and Service</a> and acknowledge that you&apos;ve
+              read our <a>Privacy Policy</a> .
+            </h4>
+          </div>
+
           <Link href={"/admin/users"}>
-            <Button title="Log in" />
+            <Button title="Sign up" />
           </Link>
 
-          <div className={styles.signup}>
+          <div className={styles.login}>
             <h4>
-              Don&apos;t have an account yet?{" "}
-              <Link href="/signup">sign up!</Link>
+              Already have an account yet? <Link href="/">Log in!</Link>
             </h4>
           </div>
         </div>
@@ -85,4 +107,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
