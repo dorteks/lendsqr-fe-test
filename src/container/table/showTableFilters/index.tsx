@@ -41,15 +41,19 @@ const FilterTable = () => {
               </div>
               <div className={styles.email}>
                 <h3>Email</h3>
-                <input className={styles.input} placeholder="Email" />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className={styles.input}
+                />
               </div>
 
               <div className={styles.date}>
                 <h3>Date</h3>
                 <input
                   type="date"
-                  className={styles.input}
                   placeholder="Date"
+                  className={styles.input}
                 />
               </div>
 

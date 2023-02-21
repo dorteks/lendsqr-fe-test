@@ -64,7 +64,7 @@ const Login = () => {
           <Link className={styles.forgotPassword} href="/auth/forgot-password">
             forgot password?
           </Link>
-          <Link href={"/admin/dashboard"}>
+          <Link href={"/admin/users"}>
             <Button title="Log in" />
           </Link>
         </div>
