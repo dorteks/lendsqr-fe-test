@@ -54,9 +54,9 @@
     margin: auto;
     max-width: 450px;
 
-    .welcome {
+    .register {
       color: #213f7d;
-      font-size: 40px;
+      font-size: 35px;
       margin-bottom: 10px;
       font-weight: bolder;
     }
@@ -103,7 +103,7 @@
   margin-top: 20px;
 }
 
-.signup {
+.login {
   margin-top: 40px;
   text-align: center;
 
@@ -111,6 +111,21 @@
     color: #213f7d;
 
     a {
+      color: #39cdcc;
+    }
+  }
+}
+
+.termsAndCondition {
+  margin-top: 20px;
+  text-align: center;
+
+  h4 {
+    color: #213f7d;
+    font-weight: lighter;
+
+    a {
+      font-weight: bold;
       color: #39cdcc;
     }
   }
